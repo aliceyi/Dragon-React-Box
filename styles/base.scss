@@ -1,0 +1,113 @@
+$color-white: #ffffff;
+$color-red: #fc5d65;
+$color-dark: #222222;
+$color-light-grey: #f5f5f5;
+$color-grey: #bfbfbf;
+$color-mid-grey: #949494;
+$color-smoke: #b6b6b6;
+$color-pale-grey: #e6e6e6;
+$color-gold: #9c7d31;
+
+$CDN_PATH: 'https://cdn-cn.ff-svc.cn';
+
+$font-family-regular: 'PingFangSC-Regular',
+'sans-serif',
+'Helvetica Neue For Number',
+'-apple-system',
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+'Hiragino Sans GB',
+'Microsoft YaHei',
+'Helvetica Neue',
+Helvetica,
+Arial;
+$font-family-medium: 'PingFangSC-Medium',
+'sans-serif-medium',
+'Helvetica Neue For Number',
+'-apple-system',
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+'Hiragino Sans GB',
+'Microsoft YaHei',
+'Helvetica Neue',
+Helvetica,
+Arial;
+$font-family-light: 'PingFangSC-Light',
+'sans-serif-light',
+'Helvetica Neue For Number',
+'-apple-system',
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+'Hiragino Sans GB',
+'Microsoft YaHei',
+'Helvetica Neue',
+Helvetica,
+Arial;
+$font-family-semibold: 'PingFangSC-Semibold',
+'sans-serif-black',
+'Helvetica Neue For Number',
+'-apple-system',
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+'Hiragino Sans GB',
+'Microsoft YaHei',
+'Helvetica Neue',
+Helvetica,
+Arial;
+$font-family-polc: 'PolarisCondensed';
+
+$font-size-10: 10px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-18: 18px;
+$font-size-23: 23px;
+$font-size-26: 26px;
+
+$line-height-16: 16px;
+$line-height-18: 18px;
+$line-height-22: 22px;
+$line-height-28: 28px;
+$line-height-32: 32px;
+
+$border-btn-dark: 1px solid $color-dark;
+$border-btn-grey: 1px solid rgba(34, 34, 34, 0.1);
+
+$size-l: 48px;
+$size-m: 24px;
+$size-sp: 16px;
+$size-s: 12px;
+$size-xsp: 8px;
+$size-xs: 6px;
+$size-xxs: 4px;
+$size-xxxs: 2px;
+
+$size-l-fixed: 48PX;
+$size-m-fixed: 24PX;
+$size-s-fixed: 12PX;
+$size-xsp-fixed: 8PX;
+$size-xs-fixed: 6PX;
+$size-xxs-fixed: 4PX;
+$size-xxxs-fixed: 2PX;
+
+$iphonex-jaw: 34px;
+
+$z-index-top: 999;
+
+.charEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowCharEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
