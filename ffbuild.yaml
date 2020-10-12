@@ -23,7 +23,8 @@ build:
       # replace default version number to scripted one, this is very important because one version of package can only be publish one time , next time the same is published , error will occur 
     - npm install
     - npm run build
-    - mkdir -p ffbuild/packages && cp -Rf ffui/* ffbuild/packages && cp -Rf package.json ffbuild/packages || echo "Ignore error 'into itself' !!"
+    # - mkdir -p ffbuild/packages && cp -Rf ffui/* ffbuild/packages && cp -Rf package.json ffbuild/packages || echo "Ignore error 'into itself' !!"
+    - mkdir -p ffbuild/packages && cp -Rf * ffbuild/packages || echo "Ignore error 'into itself' !!"
     - cat ~/.npmrc
 tests:
   unit:
