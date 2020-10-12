@@ -12,7 +12,6 @@ export type ButtonType = 'primary' | 'default' | 'danger' | 'link' | 'noBorder'
 
 interface BaseButtonProps {
     className?: string;
-    btnClassName?: string;
     /**setting Button is disabled */
     disabled?: boolean;
     /**setting Button size */
@@ -26,27 +25,28 @@ interface BaseButtonProps {
     /** setting Button is fixed */
     fixed?: string;
     icon?: string;
+    testId?: string;
     onClick?: (e: MouseEvent<HTMLButtonElement>) => void
 }
 
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
 
-export type BtnProps = Partial<NativeButtonProps & AnchorButtonProps>
-const Button: React.FunctionComponent<BtnProps> = ({ children, width, fixed, white, icon, href, noBorder, className, btnClassName, btnType, type, disabled = false, onClick, ...restProps }: any) => {
-    const wrapperClasses = classNames(
-        'ff-button',
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
+const Button: React.FunctionComponent<ButtonProps> = ({ children, width, fixed, white, icon, href, noBorder, className, btnType, type, disabled = false, onClick, testId, ...restProps }: any) => {
+    // const wrapperClasses = classNames(
+    //     'ff-button',
+    //     className,
+    //     {
+    //         [fixed]: fixed,
+    //     }
+    // )
+    const btnClasses = classNames(
+        'ff__button',
         className,
         {
-            [fixed]: fixed,
-        }
-    )
-    const btnClasses = classNames(
-        'ff-button__button',
-        btnClassName,
-        {
-            [`ff-button__button--${btnType}`]: btnType,
-            [`ff-button__button--disabled`]: disabled,
+            [`ff__button--${btnType}`]: btnType,
+            [`ff__button--disabled`]: disabled,
         })
 
     const handleClick = (e: any) => {
@@ -54,29 +54,32 @@ const Button: React.FunctionComponent<BtnProps> = ({ children, width, fixed, whi
         !disabled && onClick && onClick(e)
     }
 
-    return (
-        <div className={wrapperClasses}>
-            {btnType === 'link' && href ?
-                <a
-                    href={href}
-                    className={btnClasses}
-                    style={{ width: width }}
-                    {...restProps}
-                >{children}</a>
-                :
-                <button
-                    className={btnClasses}
-                    style={{ width: width || '100%' }}
-                    type={type}
-                    onClick={handleClick}
-                    {...restProps}
-                >
-                    <span>{children}</span>
-                    {icon && icon === 'plus' ? <span className="ff-button__button__icon"><IconPlus width="19px" height="19px" /></span> : null}
-                </button>
-            }
-        </div>
-    )
+    if (btnType === 'link' && href) {
+        return (
+            <a
+                href={href}
+                className={btnClasses}
+                style={{ width: width }}
+                data-testid={testId}
+                {...restProps}
+            >{children}</a>
+        )
+    } else {
+        return (
+            <button
+                className={btnClasses}
+                style={{ width: width || '100%' }}
+                type={type}
+                onClick={handleClick}
+                data-testid={testId}
+                disabled={disabled}
+                {...restProps}
+            >
+                <span>{children}</span>
+                {icon && icon === 'plus' ? <span className="ff__button__icon"><IconPlus width="19px" height="19px" /></span> : null}
+            </button>
+        )
+    }
 }
 
 export default Button

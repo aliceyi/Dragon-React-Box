@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>learn react</div>
         <Button btnType="primary" width="100px">primary Button</Button>
         <Button width="100px">default Button</Button>
         <Button btnType="noBorder" width="100px">noBorder Button</Button>

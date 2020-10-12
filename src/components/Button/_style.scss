@@ -1,82 +1,85 @@
 // @import '@/styles/base.scss';
 
-.ff-button {
-//   &__wrapper {
+.ff__button {
+    //   &__wrapper {
     // display: flex;
     // justify-content: center;
 
-    &__button {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      padding: 0;
-      // border-radius: 4px;
-      height: $btn-line-height;
-      font-family: $btn-font-family;
-      font-size: $btn-font-size;
-      line-height: $btn-line-height;
-      outline: none;
-      overflow: hidden;
-      cursor: pointer;
-
-      @include button-style($btn-font-color-dark, $btn-background-color-white, $btn-border-dark);
-
-      &--default {
-        @include button-style($btn-font-color-dark, $btn-background-color-white, $btn-border-dark);
-      }
-
-      &--primary {
-        @include button-style($btn-font-color-white, $btn-background-color-dark, $btn-border-dark);
-      }
-
-      &--disabled {
-        @include button-style($btn-font-color-white, $btn-background-color-disabled, $btn-border-disabled);
-        color: $btn-font-color-white;
-        background-color: $btn-background-color-disabled;
-        border: $btn-border-disabled;
-        cursor: not-allowed;
-        > * {
-          pointer-events: none;
-        }
-      }
-
-      &--noBorder {
-        border: none;
-      }
-
-      &__icon {
-        position: absolute;
-        line-height: 19px;
-        right: $size-s;
-        top: $size-s;
-      }
-    }
-
-    &__button--link {
-      background: none;
-      border: none;
-      color: $btn-link-color;
-      font-family: $btn-font-family;
-      font-size: $btn-font-size;
-      line-height: $btn-line-height;
-      text-decoration: $link-decoration;
-      width: 100%;
-      text-align: center;
-
-      &:visited,
-      &:hover,
-      &:active {
-        color: $btn-link-hover-color;
-        font-family: $font-family-semibold;
-        font-size: $font-size-15;
+    & {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 0;
+        // border-radius: 4px;
+        height: $btn-line-height;
+        font-family: $btn-font-family;
+        font-size: $btn-font-size;
         line-height: $btn-line-height;
-        text-decoration: $link-hover-decoration;
-      }
-      &:disabled,
-      &.disabled {
-        color: $btn-link-disabled-color;
-        pointer-events: $link-hover-decoration;
-      }
+        outline: none;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include button-style($btn-font-color-dark, $btn-background-color-white, $btn-border-dark);
+
+        &--default {
+            @include button-style($btn-font-color-dark, $btn-background-color-white, $btn-border-dark);
+        }
+
+        &--primary {
+            @include button-style($btn-font-color-white, $btn-background-color-dark, $btn-border-dark);
+        }
+
+        &--disabled {
+            @include button-style($btn-font-color-white, $btn-background-color-disabled, $btn-border-disabled);
+            color: $btn-font-color-white;
+            background-color: $btn-background-color-disabled;
+            border: $btn-border-disabled;
+            cursor: not-allowed;
+
+            >* {
+                pointer-events: none;
+            }
+        }
+
+        &--noBorder {
+            border: none;
+        }
+
+        &__icon {
+            position: absolute;
+            line-height: 19px;
+            right: $size-s;
+            top: $size-s;
+        }
     }
-//   }
+
+    &--link {
+        background: none;
+        border: none;
+        color: $btn-link-color;
+        font-family: $btn-font-family;
+        font-size: $btn-font-size;
+        line-height: $btn-line-height;
+        text-decoration: $link-decoration;
+        width: 100%;
+        text-align: center;
+
+        &:visited,
+        &:hover,
+        &:active {
+            color: $btn-link-hover-color;
+            font-family: $font-family-semibold;
+            font-size: $font-size-15;
+            line-height: $btn-line-height;
+            text-decoration: $link-hover-decoration;
+        }
+
+        &:disabled,
+        &.disabled {
+            color: $btn-link-disabled-color;
+            pointer-events: $link-hover-decoration;
+        }
+    }
+
+    //   }
 }
