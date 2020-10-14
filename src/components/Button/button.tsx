@@ -1,46 +1,56 @@
-// import React, { MouseEvent } from 'react'
-import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, MouseEvent } from 'react';
-
-import { IconPlus } from '../SvgIcons'
-// import styles from './Button.module.scss'
+import React from 'react';
+// import './button.css';
 import classNames from 'classnames'
 
-
-export type Type = 'submit' | 'reset' | 'button'
-export type ButtonSize = 'lg' | 'sm'
-export type ButtonType = 'primary' | 'default' | 'danger' | 'link' | 'noBorder'
-
-interface BaseButtonProps {
+export interface ButtonProps {
+    /**
+     * setting button style
+     */
     className?: string;
-    /**setting Button is disabled */
-    disabled?: boolean;
-    /**setting Button size */
-    size?: ButtonSize;
-    /**setting Button type */
-    btnType?: ButtonType;
-    type?: Type;
+    /**
+     * Is this the principal call to action on the page?
+     */
+    btnType?: 'primary' | 'default' | 'danger' | 'link' | 'noBorder';
+    /**
+     * What background color to use
+     */
+    backgroundColor?: string;
+    /**
+     * How large should the button be?
+     */
+    size?: 'small' | 'medium' | 'large';
+    /**
+     * button children node
+     */
     children: React.ReactNode;
+    /**
+     * when btnType is a link, href have to value
+     */
     href?: string;
-    width?: string;
-    /** setting Button is fixed */
-    fixed?: string;
-    icon?: string;
-    testId?: string;
-    onClick?: (e: MouseEvent<HTMLButtonElement>) => void
+    /**
+     * setting test id
+     */
+    testData?: string;
+    /**
+     * setting disabled
+     */
+    disabled?: boolean;
 }
 
-type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
-type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
-
-export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
-const Button: React.FunctionComponent<ButtonProps> = ({ children, width, fixed, white, icon, href, noBorder, className, btnType, type, disabled = false, onClick, testId, ...restProps }: any) => {
-    // const wrapperClasses = classNames(
-    //     'ff-button',
-    //     className,
-    //     {
-    //         [fixed]: fixed,
-    //     }
-    // )
+/**
+ * Primary UI component for user interaction
+ */
+export const Button: React.FC<ButtonProps> = ({
+    btnType = 'default',
+    children,
+    size = 'medium',
+    href,
+    testData,
+    className,
+    disabled = false,
+    ...props
+}) => {
+    // const mode = btnType ? 'storybook-button--primary' : 'storybook-button--secondary';
     const btnClasses = classNames(
         'ff__button',
         className,
@@ -48,38 +58,26 @@ const Button: React.FunctionComponent<ButtonProps> = ({ children, width, fixed, 
             [`ff__button--${btnType}`]: btnType,
             [`ff__button--disabled`]: disabled,
         })
-
-    const handleClick = (e: any) => {
-        if (type !== 'reset' && type !== 'submit') { e.preventDefault() }
-        !disabled && onClick && onClick(e)
-    }
-
     if (btnType === 'link' && href) {
         return (
             <a
                 href={href}
                 className={btnClasses}
-                style={{ width: width }}
-                data-testid={testId}
-                {...restProps}
+                data-testid={testData}
+                {...props}
             >{children}</a>
         )
     } else {
         return (
             <button
                 className={btnClasses}
-                style={{ width: width || '100%' }}
-                type={type}
-                onClick={handleClick}
-                data-testid={testId}
+                data-testid={testData}
                 disabled={disabled}
-                {...restProps}
+                {...props}
             >
                 <span>{children}</span>
-                {icon && icon === 'plus' ? <span className="ff__button__icon"><IconPlus width="19px" height="19px" /></span> : null}
+                {/* {icon && icon === 'plus' ? <span className="ff__button__icon"><IconPlus width="19px" height="19px" /></span> : null} */}
             </button>
         )
     }
-}
-
-export default Button
+};
