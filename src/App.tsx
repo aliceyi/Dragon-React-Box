@@ -7,11 +7,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>learn react</div>
-        <Button btnType="primary" width="100px">primary Button</Button>
-        <Button width="100px">default Button</Button>
-        <Button btnType="noBorder" width="100px">noBorder Button</Button>
-        <Button btnType="primary" disabled width="100px" >disable Button</Button>
-        <Button btnType="link" width="100px" href="http://www.farfetch.com">like Button</Button>
+        <Button btnType="primary">primary Button</Button>
+        <Button>default Button</Button>
+        <Button btnType="noBorder">noBorder Button</Button>
+        <Button btnType="primary" disabled >disable Button</Button>
+        <Button btnType="link" href="http://www.farfetch.com">like Button</Button>
       </header>
     </div>
   );
