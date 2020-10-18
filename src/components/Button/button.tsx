@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 // import './button.css';
 import classNames from 'classnames'
 
-export interface ButtonProps {
+export interface BaseButtonProps {
     /**
      * setting button style
      */
@@ -37,10 +37,14 @@ export interface ButtonProps {
     disabled?: boolean;
 }
 
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
+type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
+
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
     btnType = 'default',
     children,
     size = 'medium',

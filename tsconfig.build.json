@@ -2,10 +2,10 @@
    "compilerOptions": {
      "outDir": "dist",
      "module": "esnext", // compile module
-     "target": "ES5",
+     "target": "es5",
      "declaration": true,
      "jsx": "react",
-     "moduleResolution": "Node", // classic 是从底层->顶层 node find from node-module
+     "moduleResolution": "node", // classic 是从底层->顶层 node find from node-module
      "allowSyntheticDefaultImports": true, // accepet use default import, not need import * as Button from './Button'
    },
    "include": [
@@ -15,5 +15,8 @@
      "src/**/*.test.tsx",
      "src/**/*.stories.tsx",
      "src/setupTests.ts",
+     "src/serviceWorker.ts",
+     "src/stories/*",
+     "src/Button1/*"
    ]
 }
