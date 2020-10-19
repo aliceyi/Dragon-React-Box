@@ -1,4 +1,5 @@
 import * as React from "react";
+import { string } from "prop-types";
 
 function SvgIconArrow(props) {
   const path = {
@@ -19,6 +20,9 @@ function SvgIconArrow(props) {
       />
     </svg>
   );
+}
+SvgIconArrow.propTypes = {
+  dir: string
 }
 
 export default SvgIconArrow;
