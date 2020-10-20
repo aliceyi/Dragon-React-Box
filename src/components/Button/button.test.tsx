@@ -4,24 +4,24 @@ import Button, { ButtonProps } from './button'
 
 const defaultProps = {
     onClick: jest.fn(),
-    testId: 'default'
+    testData: 'default'
 }
 
 const testProps: ButtonProps = {
     width: '100px',
     className: 'testBtn',
     btnType: 'primary',
-    testId: 'testProps'
+    testData: 'testProps'
 }
 
 const linkProps: ButtonProps = {
     btnType: 'link',
-    testId: 'link',
+    testData: 'link',
     href: 'http://www.farfetch.com'
 }
 
 const disableProps: ButtonProps = {
-    testId: 'disabled',
+    testData: 'disabled',
     disabled: true,
     onClick: jest.fn(),
 }

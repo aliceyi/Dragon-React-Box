@@ -73,6 +73,8 @@ $line-height-18: 18px;
 $line-height-22: 22px;
 $line-height-28: 28px;
 $line-height-32: 32px;
+$line-height-42: 42px;
+$line-height-48: 48px;
 
 $border-btn-dark: 1px solid $color-dark;
 $border-btn-grey: 1px solid rgba(34, 34, 34, 0.1);
@@ -99,15 +101,15 @@ $iphonex-jaw: 34px;
 $z-index-top: 999;
 
 .charEllipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .rowCharEllipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }

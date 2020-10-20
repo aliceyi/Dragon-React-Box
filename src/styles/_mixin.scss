@@ -1,29 +1,36 @@
-@mixin button-style(
-  $color,
-  $background,
-  $border,
-  $hover-background: lighten($background, 7.5%),
-  $hover-border: lighten($border, 10%),
-  $hover-color: $color,
-  ) {
-  color: $color;
-  background-color: $background;
-  border: 1px solid $border;
-  &:hover {
-    color: $hover-color;
-    background: $hover-background;
-    border-color: $hover-border;
-  }
-  &:focus,
-  &.focus {
-    color: $hover-color;
-    background: $hover-background;
-    border-color: $hover-border;
-  }
-  &:disabled,
-  &.disabled {
+@mixin button-style($color,
+    $background,
+    $border,
+    $hover-background: lighten($background, 7.5%),
+    $hover-border: lighten($border, 10%),
+    $hover-color: $color,
+) {
     color: $color;
-    background: $background;
-    border-color: $border;
-  }
+    background-color: $background;
+    border: 1px solid $border;
+
+    &:hover {
+        color: $hover-color;
+        background: $hover-background;
+        border-color: $hover-border;
+    }
+
+    &:focus,
+    &.focus {
+        color: $hover-color;
+        background: $hover-background;
+        border-color: $hover-border;
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $color;
+        background: $background;
+        border-color: $border;
+    }
+}
+
+@mixin height ($height, $line-height:$height) {
+    height: $height;
+    line-height: $line-height;
 }

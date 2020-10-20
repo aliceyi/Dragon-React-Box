@@ -55,6 +55,7 @@ $line-height-22:                   22px !default;
 $line-height-28:                   28px !default;
 $line-height-32:                   32px !default;
 $line-height-42:                   42px !default;
+$line-height-48:                   48px !default;
 $line-height-base:                 1.5 !default;
 $line-height-lg:                   2 !default;
 $line-height-sm:                   1.25 !default;
@@ -147,7 +148,9 @@ $btn-font-family:                    $font-family-semibold !default;
 $btn-font-size:                      $font-size-15 !default;
 $btn-font-color-dark:                $color-dark !default;
 $btn-font-color-white:               $color-white !default;
+$btn-small-line-height:              $line-height-32 !default;
 $btn-line-height:                    $line-height-42 !default;
+$btn-large-line-height:              $line-height-48 !default;
 
 $btn-border-dark:                    $color-dark !default;
 $btn-border-disabled:                $color-grey !default;
