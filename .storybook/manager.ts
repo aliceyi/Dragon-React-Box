@@ -1,2 +1,3 @@
 import { addons } from '@storybook/addons';
-addons.setConfig({ showRoots: true });
+import myTheme from './myThem'
+addons.setConfig({ showRoots: true, theme: myTheme });
