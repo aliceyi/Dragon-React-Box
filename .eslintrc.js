@@ -26,9 +26,9 @@ module.exports = {
     ],
     "rules": {
     },
-    settings: {
-        react: {
-            version: "detect"
+    "settings": {
+        "react": {
+            "version": "detect"
         }
     }
 };
