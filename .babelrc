@@ -1,0 +1,21 @@
+{
+ "plugins": [
+   ["@babel/plugin-proposal-decorators", {"decoratorsBeforeExport": true}],
+   // sport es6 api e.g promise Set and Map
+   ["@babel/plugin-transform-runtime",{"corejs": 3}]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "debug": false
+      }
+    ],
+    [
+      "@babel/preset-react", 
+      { 
+        "development": true 
+      }
+    ]
+  ]
+}
