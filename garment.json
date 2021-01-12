@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/@garment/workspace/schemas/config.schema.json",
+  "presets": {
+    "babel-package": {
+      "tasks": {
+        "publish": {
+          "runner": "publish"
+        },
+        "clean": {
+          "runner": "clean",
+          "skipWatch": true,
+          "input": {
+            "include": ["{{projectDir}}/lib", "{{projectDir}}/es"]
+          }
+        },
+        "prebuild": "babel-package:clean",
+        "build": [
+          {
+            "runner": "babel",
+            "input": "{{projectDir}}/src/**/*.{js,jsx,ts,tsx}",
+            "output": "{{projectDir}}/es",
+            "options": {
+              "env": "es"
+            }
+          },
+          {
+            "runner": "babel",
+            "skipWatch": true,
+            "input": "{{projectDir}}/src/**/*.{js,jsx,ts,tsx}",
+            "output": "{{projectDir}}/lib",
+            "options": {
+              "env": "cjs"
+            }
+          },
+          ":ts"
+        ],
+        "test": {
+          "runner": "jest",
+          "buildDependencies": true
+        },
+        "lint": {
+          "runner": "eslint",
+          "input": "{{projectDir}}/src/**/*.ts?(x)",
+          "output": "{{projectDir}}/src"
+        },
+        "ts": {
+          "runner": "ts",
+          "input": "{{projectDir}}/src/**/*.ts?(x)",
+          "output": ["{{projectDir}}/es", "{{projectDir}}/lib"],
+          "buildDependencies": "ts",
+          "options": {
+            "configFile": "tsconfig.json"
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "dragon-button": {
+      "path": "packages/dragon-button",
+      "extends": ["babel-package"]
+    },
+    "theme": {
+      "path": "packages/theme",
+      "extends": ["babel-package"]
+    }
+  },
+ "schematics": ["@garment/standard-schematics"],
+  "experimentalCacheSubscriptions": false
+}

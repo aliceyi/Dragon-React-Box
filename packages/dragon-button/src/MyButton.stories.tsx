@@ -4,9 +4,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 // import { action } from '@storybook/addon-actions';
-import { Button, ButtonProps } from '../components/Button/index';
-// import { Button, ButtonProps } from '@dragon/button';
-
+import { Button, ButtonProps } from './Button';
 
 export default {
   title: 'Example/MyButton',
@@ -21,8 +19,9 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   btnType: 'primary',
-  children: 'primary btn',
+  children: 'primary btn1111',
   width: '180px',
+  href: 'www.baidu.com'
   //   onClick: action('my button click')
 };
 
