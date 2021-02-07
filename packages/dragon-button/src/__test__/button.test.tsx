@@ -1,6 +1,8 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import Button, { ButtonProps } from '../../index'
+import Button, { ButtonProps } from '../index'
+// https://github.com/styled-components/jest-styled-components
+import 'jest-styled-components'
 
 const defaultProps = {
     onClick: jest.fn(),
@@ -32,7 +34,7 @@ describe('test Button component', () => {
         const element = screen.getByTestId('default')
         expect(element).toBeInTheDocument()
         expect(element.tagName).toEqual('BUTTON')
-        expect(element).toHaveClass('ff__button')
+        // expect(element).toHaveClass('ff__button')
         // expect(element.disabled).toBeFalsy()
         fireEvent.click(element)
         expect(defaultProps.onClick).toHaveBeenCalled()
@@ -42,7 +44,7 @@ describe('test Button component', () => {
         render(<Button {...testProps}>test Props</Button>)
         const element = screen.getByTestId('testProps')
         expect(element).toBeInTheDocument()
-        expect(element).toHaveClass('ff__button ff__button--primary testBtn')
+        // expect(element).toHaveClass('ff__button ff__button--primary testBtn')
         expect(element).toMatchSnapshot()
     })
     it('should render a link when btnType equals link and href is provided', () => {
@@ -50,7 +52,7 @@ describe('test Button component', () => {
         const element = screen.getByTestId('link')
         expect(element).toBeInTheDocument()
         expect(element.tagName).toEqual('A')
-        expect(element).toHaveClass('ff__button ff__button--link')
+        // expect(element).toHaveClass('ff__button ff__button--link')
         expect(element).toMatchSnapshot()
     })
     it('should render disabled button when disabled set to true', () => {

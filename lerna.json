@@ -1,6 +1,14 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "0.0.0"
+    "command": {
+        "bootstrap": {
+            "ignore": "components-*",
+            "npmClientArgs": ["--no-package-lock"]
+        },
+        "publish": {
+            "conventionalCommits": true
+        }
+    },
+    "npmClient": "yarn",
+    "packages": ["packages/*"],
+    "version": "independent"
 }

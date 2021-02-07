@@ -19,11 +19,18 @@
   },
   "scripts": {
     "build": "NODE_ENV=production npx webpack --config ./webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tailwind-styled-components": "^1.0.7"
+    "@dragon/theme": "^1.0.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.3",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "jest-styled-components": "^7.0.3"
   }
 }

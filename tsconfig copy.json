@@ -2,20 +2,19 @@
   "compilerOptions": {
      /* 基本选项 */
     "target": "es5", // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES6'/'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
-    "outDir": "./lib", // 指定输出目录
+    "outDir": "./dist", // 指定输出目录
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ], // 指定要包含在编译中的库文件
     "allowJs": true, // 允许编译 javascript 文件
-    // "isolatedModules": true,  // 将每个文件作为单独的模块 （与 'ts.transpileModule' 类似）.
+    "isolatedModules": true,  // 将每个文件作为单独的模块 （与 'ts.transpileModule' 类似）.
     "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",  // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "resolveJsonModule": true,
-    "declaration": true,
     /* reference https://github.com/TypeStrong/ts-loader/issues/767*/
     "noEmit": false, // 不生成输出文件
     "jsx": "react",
@@ -27,9 +26,8 @@
     "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。
   },
   "include": [
-    "./packages/**/*",
-    "./script/*"
+    "./src/**/*", "config", "test/config"
   ],
-  "exclude": ["components/**/__tests__", "node_modules"],
+  "exclude": ["components/**/__tests__"],
   "extends": "./paths.json"
 }

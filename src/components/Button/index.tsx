@@ -1,48 +1,48 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
-import './Button.scss';
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import './Button.scss'
 import classNames from 'classnames'
 
 export interface BaseButtonProps {
     /**
      * setting button style
      */
-    className?: string;
+    className?: string
     /**
      * Is this the principal call to action on the page?
      */
-    btnType?: 'primary' | 'default' | 'link';
+    btnType?: 'primary' | 'default' | 'link'
     /**
      * How large should the button be?
      */
-    size?: 'small' | 'medium' | 'large';
+    size?: 'small' | 'medium' | 'large'
     /**
      * button children node
      */
-    children: React.ReactNode;
+    children: React.ReactNode
     /**
      * when btnType is a link, href have to value
      */
-    href?: string;
+    href?: string
     /**
      * setting test id
      */
-    testData?: string;
+    testData?: string
     /**
      * setting disabled
      */
-    disabled?: boolean;
+    disabled?: boolean
     /**
      * setting button  text alignment
      */
-    textAlignment?: 'left' | 'center' | 'right';
+    textAlignment?: 'left' | 'center' | 'right'
     /**
      * setting button  icon alignment
      */
-    iconAlignment?: 'left' | 'right';
+    iconAlignment?: 'left' | 'right'
     /**
      * setting button width
      */
-    width?: string;
+    width?: string
 }
 
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
@@ -66,16 +66,13 @@ export const Button: FC<ButtonProps> = ({
     ...props
 }) => {
     // const mode = btnType ? 'storybook-button--primary' : 'storybook-button--secondary';
-    const btnClasses = classNames(
-        'ff__button',
-        className,
-        {
-            [`ff__button--${btnType}`]: btnType,
-            [`ff__button--disabled`]: disabled,
-            [`ff__button--${size}`]: size,
-            [`ff__button--text-${textAlignment}`]: textAlignment,
-            [`ff__button--icon-${iconAlignment}`]: iconAlignment
-        })
+    const btnClasses = classNames('ff__button', className, {
+        [`ff__button--${btnType}`]: btnType,
+        [`ff__button--disabled`]: disabled,
+        [`ff__button--${size}`]: size,
+        [`ff__button--text-${textAlignment}`]: textAlignment,
+        [`ff__button--icon-${iconAlignment}`]: iconAlignment,
+    })
     if (btnType === 'link' && href) {
         return (
             <a
@@ -84,7 +81,9 @@ export const Button: FC<ButtonProps> = ({
                 className={btnClasses}
                 data-testid={testData}
                 {...props}
-            >{children}</a>
+            >
+                {children}
+            </a>
         )
     } else {
         return (
@@ -100,7 +99,6 @@ export const Button: FC<ButtonProps> = ({
             </button>
         )
     }
-};
+}
 
-
-export default Button;
+export default Button
