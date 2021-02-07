@@ -1,9 +1,12 @@
 {
   "name": "@dragon/theme",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
+  "publishConfig": {
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
+  },
   "files": [
     "es",
     "lib",

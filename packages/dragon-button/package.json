@@ -1,6 +1,6 @@
 {
   "name": "@dragon/button",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -10,6 +10,9 @@
     "src",
     "README.md"
   ],
+  "publishConfig": {
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
+  },
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -17,14 +20,11 @@
   "directories": {
     "lib": "lib"
   },
-  "scripts": {
-    "build": "NODE_ENV=production npx webpack --config ./webpack.config.js",
-    "test": "jest"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dragon/theme": "^1.1.0",
+    "@dragon/theme": "^1.2.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
