@@ -25,12 +25,12 @@
     "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext js,ts,tsx src",
-    "lint:fix": "yarn run lint --fix",
+    "lint:fix": "npm run lint --fix",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+    "prepublishOnly": "npm run test && npm run lint && npm run build"
   },
   "husky": {
     "hooks": {
