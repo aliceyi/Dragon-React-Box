@@ -39,4 +39,4 @@ build signgole package
 yarn build dragon-button
 
 7. publish
-   lerna publish
+   lerna publish from-package --yes

@@ -1,5 +1,5 @@
 {
-  "name": "@dragon/theme",
+  "name": "@ff-dragon/theme",
   "version": "1.4.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -10,6 +10,11 @@
     "src",
     "README.md"
   ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "styled-components": "^5.2.1"
   }

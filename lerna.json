@@ -5,10 +5,13 @@
             "npmClientArgs": ["--no-package-lock"]
         },
         "publish": {
-            "conventionalCommits": true
+            "conventionalCommits": true,
+            "ignoreChanges": ["*.md"],
+            "registry": "https://registry.npmjs.org/"
         }
     },
     "npmClient": "yarn",
     "packages": ["packages/*"],
-    "version": "independent"
+    "version": "independent",
+    "useWorkspaces": true
 }

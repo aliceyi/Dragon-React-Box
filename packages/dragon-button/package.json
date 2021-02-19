@@ -1,5 +1,5 @@
 {
-  "name": "@dragon/button",
+  "name": "@ff-dragon/button",
   "version": "1.4.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -19,9 +19,13 @@
   },
   "scripts": {},
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
-    "@dragon/theme": "^1.4.0",
+    "@dragon/ff-theme": "^1.4.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
