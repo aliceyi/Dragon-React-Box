@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@ff-dragon/button@1.5.0...@ff-dragon/button@1.5.1) (2021-02-21)
+
+
+### Bug Fixes
+
+* **button:** fix button dependency ([b8a7218](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/b8a7218d7098680f90a6b0393a30ec5a52037507))
+
+
+
+
+
 # 1.5.0 (2021-02-21)
 
 
