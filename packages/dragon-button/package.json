@@ -1,5 +1,5 @@
 {
-  "name": "@ff-dragon/button",
+  "name": "@dragon/button",
   "version": "1.5.1",
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -21,11 +21,10 @@
   "author": "",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
   },
   "dependencies": {
-    "@ff-dragon/theme": "^1.4.0",
+    "@dragon/theme": "^1.4.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
