@@ -20,12 +20,7 @@ const getInputAndOutputConfig = (args) => {
     // 输入的文件配置
     const inputOptions = {
         input: `${projectPath}/src/${mainFile[0] || 'index.ts'}`, // 文件后缀问题，ts or tsx 同时存在
-        external: [
-            'react',
-            '@emotion/stylis',
-            '@emotion/is-prop-valid',
-            'stream',
-        ],
+        external: ['react', '@emotion/stylis', '@emotion/is-prop-valid', 'stream'],
         plugins: [
             babel({
                 // babel文件的设置，会读取根目录的babel.config.js文件配置
@@ -42,7 +37,7 @@ const getInputAndOutputConfig = (args) => {
         file: `${projectPath}/es/index.js`,
         exports: 'named',
         //http://rollupjs.org/guide/en/#command-line-flags
-        format: 'esm', // 引出的方式为cjs的方式
+        format: 'esm', // 引出的方式为esm的方式
         name: `${args}`, // 输出可引用名为package的名字
     }
 

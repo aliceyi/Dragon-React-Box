@@ -18,7 +18,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
     btnType: 'primary',
-    children: 'primary btn1111',
+    children: 'primary btn',
     width: '180px',
     href: 'www.baidu.com',
     //   onClick: action('my button click')
