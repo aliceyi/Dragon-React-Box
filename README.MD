@@ -28,7 +28,10 @@ npm run build:rollup dragon-button
 
 5. use `yarn workspace` install some dependence to specifically packages
 
-yarn workspace @dragon/button add jest-styled-components --dev
+    yarn workspace @dragon/button add jest-styled-components --dev
+
+    how do local packages depend on each other？
+    yarn workspace @dragon/button add @dragon/theme
 
 6. build packages
 
