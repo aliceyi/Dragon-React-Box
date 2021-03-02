@@ -19,16 +19,19 @@ npm run build:rollup dragon-button
 2. install all dependence for packages
    yarn bootstrap
 
-3. run document
+3. run dev
+   yarn dev
+
+4. run document
    yarn storybook
 
-4. test
+5. test
    yarn test
    yarn test dragon-button
 
-5. use `yarn workspace` install some dependence to specifically packages
+6. use `yarn workspace` install some dependence to specifically packages
 
-yarn workspace @dragon/button add jest-styled-components --dev
+yarn workspace @farfetch/dragon-button add jest-styled-components --dev
 
 6. build packages
 

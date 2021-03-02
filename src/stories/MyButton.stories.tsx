@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 // import { action } from '@storybook/addon-actions';
 import { Button, ButtonProps } from '../components/Button/index'
-// import { Button, ButtonProps } from '@dragon/button';
+// import { Button, ButtonProps } from '@farfetch/dragon-button/button';
 
 export default {
     title: 'Example/MyButton',
