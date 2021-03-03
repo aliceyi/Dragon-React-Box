@@ -12,9 +12,10 @@
   ],
   "license": "MIT",
   "publishConfig": {
-    "@farfetch:registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1/"
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1/"
   },
   "dependencies": {
     "styled-components": "^5.2.1"
-  }
+  },
+  "gitHead": "197978bff197dd125cff2537a46a05b1d8071bcd"
 }
