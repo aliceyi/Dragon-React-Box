@@ -1,6 +1,6 @@
 {
   "name": "@farfetch/dragon-button",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -24,7 +24,7 @@
     "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
   },
   "dependencies": {
-    "@farfetch/dragon-theme": "^1.4.0",
+    "@farfetch/dragon-theme": "^1.6.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
