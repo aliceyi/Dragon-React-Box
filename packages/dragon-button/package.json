@@ -1,6 +1,6 @@
 {
-  "name": "@farfetch/dragon-button",
-  "version": "1.6.0",
+  "name": "@dragon/react-button",
+  "version": "0.0.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -21,10 +21,10 @@
   "author": "",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/npm-stable/"
   },
   "dependencies": {
-    "@farfetch/dragon-theme": "^1.6.0",
+    "@dragon/react-theme": "^0.0.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

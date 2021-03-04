@@ -1,6 +1,6 @@
 {
-  "name": "@farfetch/dragon-theme",
-  "version": "1.6.0",
+  "name": "@dragon/react-theme",
+  "version": "0.0.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/npm-stable/"
   },
   "dependencies": {
     "styled-components": "^5.2.1"

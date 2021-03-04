@@ -1,6 +1,6 @@
 {
-  "name": "@farfetch/dragon-react-box",
-  "version": "0.1.1",
+  "name": "@dragon/react-box",
+  "version": "0.0.0",
   "description": "Website UI Library",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -12,9 +12,6 @@
     "UI",
     "React"
   ],
-  "publishConfig": {
-    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
-  },
   "workspaces": [
     "packages/*"
   ],
