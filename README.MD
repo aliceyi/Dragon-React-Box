@@ -31,7 +31,7 @@ npm run build:rollup dragon-button
 
 6. use `yarn workspace` install some dependence to specifically packages
 
-yarn workspace @farfetch/dragon-button add jest-styled-components --dev
+yarn workspace @dragon/dragon-button add jest-styled-components --dev
 
 6. build packages
 
