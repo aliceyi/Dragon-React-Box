@@ -1,5 +1,5 @@
 {
-  "name": "@dragon/react-theme",
+  "name": "@farfetch/react-theme",
   "version": "0.1.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -16,6 +16,5 @@
   },
   "dependencies": {
     "styled-components": "^5.2.1"
-  },
-  "gitHead": "197978bff197dd125cff2537a46a05b1d8071bcd"
+  }
 }

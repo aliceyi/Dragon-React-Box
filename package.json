@@ -1,5 +1,5 @@
 {
-  "name": "@dragon/react-box",
+  "name": "@farfetch/react-box",
   "version": "0.0.0",
   "description": "Website UI Library",
   "main": "dist/index.js",
