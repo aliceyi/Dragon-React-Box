@@ -1,6 +1,6 @@
 import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 // import './Button.scss';
-import theme from '@farfetch/dragon-theme'
+import theme from '@dragon/react-theme'
 import styled from 'styled-components'
 export interface BaseButtonProps {
     /**
