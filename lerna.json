@@ -7,7 +7,7 @@
         "publish": {
             "conventionalCommits": true,
             "ignoreChanges": ["*.md"],
-            "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1/"
+            "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1/"
         }
     },
     "npmClient": "yarn",

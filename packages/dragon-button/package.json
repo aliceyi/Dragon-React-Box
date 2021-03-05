@@ -21,7 +21,7 @@
   "author": "",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-beta-we1"
+    "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1"
   },
   "dependencies": {
     "@farfetch/react-theme": "^0.1.0",
