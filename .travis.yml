@@ -7,7 +7,6 @@ cache:
 env:
     - CI=true
 script:
-    - yarn global add lerna
     - yarn run build-storybook
     - lerna publish --yes
 deploy:
