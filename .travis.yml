@@ -9,7 +9,6 @@ env:
 script:
     - yarn global add lerna
     - yarn run build-storybook
-    - yarn run build
     - lerna publish --yes
 deploy:
     provider: pages
