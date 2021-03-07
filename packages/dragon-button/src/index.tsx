@@ -10,7 +10,7 @@ export interface BaseButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
-    btnType?: 'primary' | 'default' | 'link'
+    btnType?: 'primary' | 'default' | 'link' | 'text' | 'icon' | 'textIcon'
     /**
      * How large should the button be?
      */
@@ -47,6 +47,10 @@ export interface BaseButtonProps {
      * setting button click callback
      */
     onClick?: () => void
+    /**
+     * whether the button width is adaptive according to the content
+     */
+    widthAuto?: boolean
 }
 
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
@@ -135,7 +139,7 @@ const DefaultBtn = styled.button`
     outline: none;
     overflow: hidden;
     cursor: pointer;
-    width: ${(props) => props.width};
+    width: ${(props) => (props.widthAuto ? 'auto' : props.width)};
     text-align: ${(props) => props.textAlignment};
     ${(props) => {
         let btnStyle = buttonStyle(colors.secondary)
@@ -163,7 +167,7 @@ const LinkBtn = styled.a`
         }
         return btnStyle
     }}
-    width: ${(props) => props.width};
+    width: ${(props) => (props.widthAuto ? 'auto' : props.width)};
     text-align: ${(props) => props.textAlignment};
     display: inline-block;
 `
@@ -182,6 +186,7 @@ export const Button: FC<ButtonProps> = ({
     textAlignment = 'center',
     // iconAlignment = 'left',
     width = '180px',
+    widthAuto,
     onClick,
 }) => {
     const handleClick = () => {
@@ -198,6 +203,7 @@ export const Button: FC<ButtonProps> = ({
                 disabled={disabled}
                 size={size}
                 width={width}
+                widthAuto={widthAuto}
                 textAlignment={textAlignment}
             >
                 {children}
@@ -215,6 +221,7 @@ export const Button: FC<ButtonProps> = ({
                     width={width}
                     textAlignment={textAlignment}
                     onClick={handleClick}
+                    widthAuto={widthAuto}
                 >
                     <span>{children}</span>
                 </DefaultBtn>
