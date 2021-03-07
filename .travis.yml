@@ -7,11 +7,20 @@ cache:
 env:
     - CI=true
 script:
+    - yarn global add lerna
     - yarn run build-storybook
+    - yarn run build
+    - lerna publish --yes
 deploy:
     provider: pages
     skip_cleanup: true
     github_token: $github_token # Set in the settings page of your repository, as a secure variable
     local_dir: storybook-static
     on:
-        branch: feature-lerna
+      branch: feature-lerna
+deploy:
+  provider: npm
+  email: "5541037@qq.com"
+  api_key: $npm_token
+  on:
+    branch: feature-lerna
