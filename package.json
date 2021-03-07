@@ -25,16 +25,17 @@
     "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext js,ts,tsx src",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "yarn run lint --fix",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "bootstrap": "lerna bootstrap",
-    "prepublishOnly": "npm run test && npm run lint && npm run build"
+    "prepublishOnly": "yarn run test && yarn run lint && yarn run build",
+    "lerna:publish": "lerna publish from-git --yes --npm-client yarn --npm-tag beta"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run test && npm run lint"
+      "pre-commit": "yarn run test && yarn run lint"
     }
   },
   "eslintConfig": {
