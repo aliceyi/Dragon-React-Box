@@ -42,10 +42,12 @@ build signgole package
 yarn build dragon-button
 
 7. publish
-   lerna publish
+   lerna publish --yes
 
     - If can not release success last publish, you can use this comment
       lerna publish from-package --yes
 
     - Forcibly change the version of all packages, regardless of whether they are modified or not
       lerna publish --force-publish
+
+8. \*\*
