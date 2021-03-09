@@ -10,7 +10,7 @@ export interface BaseButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
-    btnType?: 'primary' | 'default' | 'link'
+    btnType?: 'primary' | 'default' | 'link' | 'textButton'
     /**
      * How large should the button be?
      */
@@ -43,6 +43,10 @@ export interface BaseButtonProps {
      * setting button width
      */
     width?: string
+    /**
+     * setting button icon
+     */
+    icon?: React.ReactNode
     /**
      * setting button click callback
      */
