@@ -28,7 +28,7 @@
     "test:coverage": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "bootstrap": "lerna bootstrap",
-    "prepublishOnly": "npm run test && npm run lint && npm run build"
+    "prepublishOnly": "yarn run test && yarn run lint && yarn run build && yarn run version"
   },
   "husky": {
     "hooks": {
