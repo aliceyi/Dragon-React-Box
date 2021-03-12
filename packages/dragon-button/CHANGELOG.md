@@ -11,6 +11,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.1.2](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@dragon/react-button@0.1.1...@dragon/react-button@0.1.2) (2021-03-12)
+
+**Note:** Version bump only for package @dragon/react-button
+
+
+
+
+
 ## [0.1.2](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@dragon/react-button@0.1.3...@dragon/react-button@0.1.2) (2021-03-12)
 
 **Note:** Version bump only for package @dragon/react-button
