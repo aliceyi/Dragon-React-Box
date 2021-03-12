@@ -20,7 +20,7 @@
     "build": "node script/build.ts",
     "test": "node script/test.ts",
     "dev": "start-storybook -p 6006",
-    "version": "lerna version --conventional-commits --no-push --yes",
+    "version": "lerna version --conventional-commits --yes",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext js,ts,tsx src",
     "lint:fix": "npm run lint --fix",
