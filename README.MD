@@ -52,4 +52,7 @@ yarn build dragon-button
     - explicitly publish packages tagged in the current commit
       lerna publish from-git
 
-8. \*\*
+8. lerna version
+
+-   only change version but cant create tag and release tag
+    lerna version --conventional-commits --no-git-tag-version --yes
