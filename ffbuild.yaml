@@ -1,33 +1,33 @@
 version: 1
 build:
-    steps:
-        - node -v && npm -v
-        - cat ~/.npmrc
-        - |
-            #!/bin/bash
-            major=`echo "$BUILD_VERSION"    | cut -d . -f 1`;                   # select major
-            minor=`echo "$BUILD_VERSION"    | cut -d . -f 2`;                   # select minor
-            revision=`echo "$BUILD_VERSION" | cut -d . -f 4 | cut -d - -f 1`;   # select revision
-            branch=`echo "$BRANCH_NAME"     | sed -e 's|[./+-\?(){}=#|_]||g' `; # select branch name except symbols
-            if [[ "$branch" == "master" ]]; then
-              packageVersion=`echo "$major.$minor.$revision"`;                  # apply version on master
-            else
-              packageVersion=`echo "$major.$minor.$revision-$branch"`;          # apply version on non-master
-            fi
-            echo "version: $packageVersion";                                    # prints version
-            if [[ "$packageVersion" == "" ]]; then
-              echo "[ERROR] package version is empty! Exiting"                  # check version
-              exit 1                                                            # cancel build
-            fi
-            sed -i 's|\(.*"version"\): "\(.*\)",.*|\1: '"\"$packageVersion\",|" package.json;
-            # replace default version number to scripted one, this is very important because one version of package can only be publish one time , next time the same is published , error will occur
-        - npm install
-        #- npm run build
-        # - mkdir -p ffbuild/packages && cp -Rf ffui/* ffbuild/packages && cp -Rf package.json ffbuild/packages || echo "Ignore error 'into itself' !!"
-        - mkdir -p ffbuild/packages && cp -Rf * ffbuild/packages || echo "Ignore error 'into itself' !!"
-        - cat ~/.npmrc
+  steps:
+    - node -v && npm -v
+    - cat ~/.npmrc
+    - |
+      #!/bin/bash
+      major=`echo "$BUILD_VERSION"    | cut -d . -f 1`;                   # select major
+      minor=`echo "$BUILD_VERSION"    | cut -d . -f 2`;                   # select minor
+      revision=`echo "$BUILD_VERSION" | cut -d . -f 4 | cut -d - -f 1`;   # select revision
+      branch=`echo "$BRANCH_NAME"     | sed -e 's|[./+-\?(){}=#|_]||g' `; # select branch name except symbols
+      if [[ "$branch" == "master" ]]; then
+        packageVersion=`echo "$major.$minor.$revision"`;                  # apply version on master
+      else
+        packageVersion=`echo "$major.$minor.$revision-$branch"`;          # apply version on non-master
+      fi
+      echo "version: $packageVersion";                                    # prints version
+      if [[ "$packageVersion" == "" ]]; then
+        echo "[ERROR] package version is empty! Exiting"                  # check version
+        exit 1                                                            # cancel build
+      fi
+      sed -i 's|\(.*"version"\): "\(.*\)",.*|\1: '"\"$packageVersion\",|" package.json; 
+      # replace default version number to scripted one, this is very important because one version of package can only be publish one time , next time the same is published , error will occur 
+    - npm install
+    - npm run build
+    # - mkdir -p ffbuild/packages && cp -Rf ffui/* ffbuild/packages && cp -Rf package.json ffbuild/packages || echo "Ignore error 'into itself' !!"
+    - mkdir -p ffbuild/packages && cp -Rf * ffbuild/packages || echo "Ignore error 'into itself' !!"
+    - cat ~/.npmrc
 tests:
-    unit:
-        steps:
-            #- npm run lint
-            #- npm run test
+  unit:
+    steps:
+      #- npm run lint
+      #- npm run test

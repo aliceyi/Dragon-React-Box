@@ -49,8 +49,6 @@ yarn build dragon-button
 
     - Forcibly change the version of all packages, regardless of whether they are modified or not
       lerna publish --force-publish
-    - explicitly publish packages tagged in the current commit
-      lerna publish from-git
 
 8. lerna version
 

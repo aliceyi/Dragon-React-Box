@@ -29,7 +29,7 @@
     "test:update": "jest --updateSnapshot",
     "bootstrap": "lerna bootstrap",
     "prepublishOnly": "yarn run test && yarn run lint && yarn run build",
-    "pub": "git push && yarn run version"
+    "git:push": "git push && yarn run version"
   },
   "husky": {
     "hooks": {
