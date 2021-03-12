@@ -47,6 +47,7 @@ export interface BaseButtonProps {
      * setting button icon
      */
     icon?: React.ReactNode
+    onlyTest?: string
     /**
      * setting button click callback
      */
