@@ -48,10 +48,6 @@ export interface BaseButtonProps {
      */
     icon?: React.ReactNode
     /**
-     * only for test and after need remove
-     */
-    onlyTest?: string
-    /**
      * setting button click callback
      */
     onClick?: () => void
