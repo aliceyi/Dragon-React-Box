@@ -50,7 +50,7 @@ export interface BaseButtonProps {
     /**
      * only for test and after need remove
      */
-    onlyTest1?: string
+    onlyTest?: string
     /**
      * setting button click callback
      */
