@@ -5,9 +5,9 @@ rollup 使用总结
     执行命令
 
 ```
-npm run test:rollup dragon-button
+npm run test:rollup button
 
-npm run build:rollup dragon-button
+npm run build:rollup button
 
 ```
 
@@ -27,11 +27,11 @@ npm run build:rollup dragon-button
 
 5. test
    yarn test
-   yarn test dragon-button
+   yarn test button
 
 6. use `yarn workspace` install some dependence to specifically packages
 
-yarn workspace @dragon/dragon-button add jest-styled-components --dev
+yarn workspace @dragon/button add jest-styled-components --dev
 
 6. build packages
 
@@ -39,7 +39,7 @@ build all packages
 yarn build
 
 build signgole package
-yarn build dragon-button
+yarn build button
 
 7. publish
    lerna publish --yes

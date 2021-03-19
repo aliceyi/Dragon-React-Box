@@ -20,7 +20,8 @@
     "build": "node script/build.ts",
     "test": "node script/test.ts",
     "dev": "start-storybook -p 6006",
-    "version": "lerna version --yes",
+    "release": "lerna version --yes",
+    "start": "node bin/start",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext js,ts,tsx src",
     "lint:fix": "npm run lint --fix",
@@ -28,8 +29,7 @@
     "test:coverage": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "bootstrap": "lerna bootstrap",
-    "prepublishOnly": "yarn run test && yarn run lint && yarn run build",
-    "git:push": "git push && yarn run version"
+    "prepublishOnly": "yarn run test && yarn run lint && yarn run build"
   },
   "husky": {
     "hooks": {
