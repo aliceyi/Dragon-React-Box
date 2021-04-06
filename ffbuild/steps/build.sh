@@ -6,9 +6,18 @@ source ffbuild/scripts/set_environment.sh
 echo_title "Print env"
 env
 
+echo_title "Installing lerna for global"
+${YARN} global add lerna
+
+echo_title "Print lerna version"
+lerna -v
+
 echo_title "Installing dependencies"
 ${YARN} config set strict-ssl false
 ${YARN} --frozen-lockfile --non-interactive
+
+echo_title "Install all dependence for packages"
+${YARN} bootstrap
 
 echo_title "Building"
 ${YARN} build-storybook
