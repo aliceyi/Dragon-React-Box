@@ -1,14 +1,14 @@
 // custom-transformer.js
-'use strict';
+'use strict'
 
-import { transform } from '@babel/core';
-import jestPreset from 'babel-preset-jest';
+import { transform } from '@babel/core'
+import jestPreset from 'babel-preset-jest'
 
 export function process(src, filename) {
-  const result = transform(src, {
-    filename,
-    presets: [jestPreset],
-  });
+    const result = transform(src, {
+        filename,
+        presets: [jestPreset],
+    })
 
-  return result || src;
+    return result || src
 }
