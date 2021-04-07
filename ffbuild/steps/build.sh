@@ -27,6 +27,7 @@ mv .yarn ${FFBUILD_RAW_DIR}
 mv bin ${FFBUILD_RAW_DIR}
 mv config ${FFBUILD_RAW_DIR}
 mv node_modules ${FFBUILD_RAW_DIR}
+mv packages ${FFBUILD_RAW_DIR}
 mv *.json ${FFBUILD_RAW_DIR}
 mv public ${FFBUILD_RAW_DIR}
 mv storybook-static ${FFBUILD_RAW_DIR}
