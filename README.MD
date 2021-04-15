@@ -31,7 +31,7 @@ npm run build:rollup button
 
 6. use `yarn workspace` install some dependence to specifically packages
 
-yarn workspace @dragon/button add jest-styled-components --dev
+yarn workspace @dragon/react-button add @dragon/react-theme --dev
 
 6. build packages
 

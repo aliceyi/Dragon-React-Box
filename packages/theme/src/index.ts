@@ -3,6 +3,9 @@ const colors = {
     red: '#fc5d65',
     dark: '#222222',
     grey: '#bfbfbf',
+    proGrey: '#e6e6e6',
+    midGrey: '#949494',
+    lightGrey: '#727272',
 }
 
 const fontWeight = {
@@ -50,43 +53,48 @@ const fontSizes = {
     xxxxl: '2.875rem',
 }
 
-const buttonStyle = {
-    colors: {
-        primary: {
-            color: colors.white,
-            backgroundColor: colors.dark,
-            borderColor: colors.dark,
-        },
-        disabled: {
-            color: colors.white,
-            backgroundColor: colors.grey,
-            borderColor: colors.grey,
-        },
-        secondary: {
-            color: colors.dark,
-            backgroundColor: colors.white,
-            borderColor: colors.dark,
-        },
-        link: {
-            color: colors.dark,
-            backgroundColor: 'transparent',
-            borderColor: 'transparent',
-        },
-    },
+// const buttonStyle = {
+//     colors: {
+//         primary: {
+//             color: colors.white,
+//             backgroundColor: colors.dark,
+//             borderColor: colors.dark,
+//         },
+//         disabled: {
+//             color: colors.white,
+//             backgroundColor: colors.grey,
+//             borderColor: colors.grey,
+//         },
+//         secondary: {
+//             color: colors.dark,
+//             backgroundColor: colors.white,
+//             borderColor: colors.dark,
+//         },
+//         link: {
+//             color: colors.dark,
+//             backgroundColor: 'transparent',
+//             borderColor: 'transparent',
+//         },
+//     },
+//     space,
+//     fonts,
+//     lineHeights,
+//     fontSizes,
+//     fontWeight,
+//     heights: {
+//         small: space.xl,
+//         medium: space.xxl,
+//         large: space.xxxl,
+//     },
+// }
+
+const theme = {
+    colors,
+    fontWeight,
     space,
     fonts,
     lineHeights,
     fontSizes,
-    fontWeight,
-    heights: {
-        small: space.xl,
-        medium: space.xxl,
-        large: space.xxxl,
-    },
-}
-
-const theme = {
-    buttonStyle,
 }
 
 export default theme

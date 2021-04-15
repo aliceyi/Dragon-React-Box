@@ -10,7 +10,7 @@ export interface BaseButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
-    btnType?: 'primary' | 'default' | 'link' | 'textButton'
+    btnType?: 'primary' | 'default' | 'link'
     /**
      * How large should the button be?
      */
@@ -95,7 +95,35 @@ function LightenDarkenColor(col, amt) {
  * https://github.com/styled-components/styled-components/issues/3117
  */
 
-const { colors, space, fontSizes, heights, fonts } = theme.buttonStyle
+const { colors, space, fontSizes, fonts } = theme
+
+const buttonBaseStyle = {
+    primary: {
+        color: colors.white,
+        backgroundColor: colors.dark,
+        borderColor: colors.dark,
+    },
+    disabled: {
+        color: colors.white,
+        backgroundColor: colors.grey,
+        borderColor: colors.grey,
+    },
+    secondary: {
+        color: colors.dark,
+        backgroundColor: colors.white,
+        borderColor: colors.dark,
+    },
+    link: {
+        color: colors.dark,
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+    },
+    heights: {
+        small: space.l,
+        medium: space.xl,
+        large: space.xxl,
+    },
+}
 
 const buttonStyle = (params) => {
     return `
@@ -132,13 +160,13 @@ const DefaultBtn = styled.button`
     padding: 0 ${space.s};
     height: ${(props) => {
         const { size } = props
-        return heights[size]
+        return buttonBaseStyle.heights[size]
     }};
     font-family: ${fonts.regular};
     font-size: ${fontSizes.m};
     line-height: ${(props) => {
         const { size } = props
-        return heights[size]
+        return buttonBaseStyle.heights[size]
     }};
     outline: none;
     overflow: hidden;
@@ -146,13 +174,13 @@ const DefaultBtn = styled.button`
     width: ${(props) => props.width};
     text-align: ${(props) => props.textAlignment};
     ${(props) => {
-        let btnStyle = buttonStyle(colors.secondary)
+        let btnStyle = buttonStyle(buttonBaseStyle.secondary)
         const { btnType, disabled } = props
         if (btnType !== 'default') {
-            btnStyle = buttonStyle(colors[btnType])
+            btnStyle = buttonStyle(buttonBaseStyle[btnType])
         }
         if (disabled) {
-            btnStyle = buttonStyle(colors.disabled)
+            btnStyle = buttonStyle(buttonBaseStyle.disabled)
         }
         return btnStyle
     }}
@@ -163,11 +191,11 @@ const DefaultBtn = styled.button`
 
 const LinkBtn = styled.a`
     ${(props) => {
-        let btnStyle = buttonStyle(colors.link)
+        let btnStyle = buttonStyle(buttonBaseStyle.link)
         const { disabled } = props
 
         if (disabled) {
-            btnStyle = buttonStyle(colors.disabled)
+            btnStyle = buttonStyle(buttonBaseStyle.disabled)
         }
         return btnStyle
     }}
