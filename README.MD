@@ -8,7 +8,6 @@ rollup 使用总结
 npm run test:rollup button
 
 npm run build:rollup button
-
 ```
 
 #### install
@@ -33,7 +32,9 @@ npm run build:rollup button
 
 yarn workspace @dragon/react-button add @dragon/react-theme --dev
 
-6. build packages
+-   if the internal reference is modified, you need to run `yarn run build` or `yarn run build [package name]` like `yarn run build button`.
+
+1. build packages
 
 build all packages
 yarn build
@@ -41,7 +42,7 @@ yarn build
 build signgole package
 yarn build button
 
-7. publish
+1. publish
    lerna publish --yes
 
     - If can not release success last publish, you can use this comment
@@ -50,7 +51,7 @@ yarn build button
     - Forcibly change the version of all packages, regardless of whether they are modified or not
       lerna publish --force-publish
 
-8. lerna version
+2. lerna version
 
 -   only change version but cant create tag and release tag
     lerna version --conventional-commits --no-git-tag-version --yes

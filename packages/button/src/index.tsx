@@ -95,7 +95,7 @@ function LightenDarkenColor(col, amt) {
  * https://github.com/styled-components/styled-components/issues/3117
  */
 
-const { colors, space, fontSizes, fonts } = theme
+const { colors, space, fontSizes, fonts, height } = theme
 
 const buttonBaseStyle = {
     primary: {
@@ -119,9 +119,9 @@ const buttonBaseStyle = {
         borderColor: 'transparent',
     },
     heights: {
-        small: space.l,
-        medium: space.xl,
-        large: space.xxl,
+        small: height.s,
+        medium: height.m,
+        large: height.l,
     },
 }
 

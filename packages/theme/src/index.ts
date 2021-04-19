@@ -1,11 +1,14 @@
 const colors = {
     white: '#ffffff',
-    red: '#fc5d65',
+    red: '#c41429',
     dark: '#222222',
-    grey: '#bfbfbf',
-    proGrey: '#e6e6e6',
+    dimGrey: '#727272',
     midGrey: '#949494',
-    lightGrey: '#727272',
+    grey: '#bfbfbf',
+    paleGrey: '#e6e6e6',
+    lightGrey: '#f5f5f5',
+    gold: '#9c7d31',
+    green: '#048273',
 }
 
 const fontWeight = {
@@ -14,31 +17,34 @@ const fontWeight = {
 }
 
 const space = {
-    xxxxs: '0.25rem',
-    xxxs: '0.375rem',
-    xxs: '0.5rem',
-    xs: '0.625rem',
-    s: '0.75rem',
-    m: '1rem',
-    l: '1.5rem',
-    xl: '2.25rem',
-    xxl: '3rem',
-    xxxl: '3.375rem',
-    xxxxl: '4.5rem',
+    xxxs: '2px',
+    xxs: '4px',
+    xs: '6px',
+    xsp: '8px',
+    s: '12px',
+    sp: '16px',
+    m: '24px',
+    l: '48px',
 }
 
 const fonts = {
-    regular: `'PingFangSC-Regular', 'sans-serif', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
-    medium: `'PingFangSC-Medium', 'sans-serif-medium', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
+    // regular: `'PingFangSC-Regular', 'sans-serif', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
+    // medium: `'PingFangSC-Medium', 'sans-serif-medium', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
     light: `'PingFangSC-Light', 'sans-serif-light', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
     semibold: `PingFangSC-Semibold', 'sans-serif-black', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
-    polc: 'PolarisCondensed',
+    // polc: 'PolarisCondensed',
 }
 
 const lineHeights = {
     compact: '1',
     default: '1.2',
     comfortable: '1.35',
+}
+
+const height = {
+    l: '42px',
+    m: '32px',
+    s: '24px',
 }
 
 const fontSizes = {
@@ -95,6 +101,7 @@ const theme = {
     fonts,
     lineHeights,
     fontSizes,
+    height,
 }
 
 export default theme
