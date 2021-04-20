@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Icons / 空间</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons-/-空间" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(4.000000, 4.000000)" stroke="#222222" stroke-width="2">
+            <polygon id="路径-2" points="0 12.9233263 7.87621582 17 16 12.9233263 16 4.17140685 7.83867469 0 0 4.17140685"></polygon>
+            <path d="M7,8.69205927 L16,4" id="路径-3"></path>
+            <path d="M1.24344979e-14,4 L8.58272807,8.69205927" id="路径-4"></path>
+            <path d="M8,8 L8,16.0614218" id="路径-5"></path>
+        </g>
+    </g>
+</svg>
