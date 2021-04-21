@@ -9,6 +9,8 @@ const typescript = require('@rollup/plugin-typescript')
 const args = process.argv[2] // 拿到 npm run build packName 中的packName
 // const projectPath = `packages/${args}` // 子包所在的路劲
 const readPackagesDir = fs.readdirSync('./packages') // 自动编译所有包
+//https://github.com/gregberge/svgr/issues/484
+const reactSvg = require('rollup-plugin-react-svg')
 
 /**
  * 设置输入输出配置
@@ -30,6 +32,7 @@ const getInputAndOutputConfig = (args) => {
             commonjs(),
             terser(),
             typescript(),
+            reactSvg(),
         ],
     }
     // esm输出的配置

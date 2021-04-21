@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function SvgIconArrowLeft(props) {
+function SvgIconClose(props) {
     return (
         <svg
             width="1em"
@@ -10,9 +10,12 @@ function SvgIconArrowLeft(props) {
             xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
-            <path d="M15.1 18.48L7 12l8.1-6.48v2.56L10.2 12l4.9 3.92v2.56z" fill="#222" />
+            <path
+                d="M20 18.587L13.413 12 20 5.413 18.587 4 12 10.587 5.413 4 4 5.413 10.587 12 4 18.587 5.413 20 12 13.413 18.587 20 20 18.587z"
+                fill="#222"
+            />
         </svg>
     )
 }
 
-export default SvgIconArrowLeft
+export default SvgIconClose

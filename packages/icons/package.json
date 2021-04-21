@@ -16,6 +16,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@svgr/cli": "^5.5.0"
+    
   }
 }
