@@ -9,8 +9,6 @@ const typescript = require('@rollup/plugin-typescript')
 const args = process.argv[2] // 拿到 npm run build packName 中的packName
 // const projectPath = `packages/${args}` // 子包所在的路劲
 const readPackagesDir = fs.readdirSync('./packages') // 自动编译所有包
-//https://github.com/gregberge/svgr/issues/484
-const reactSvg = require('rollup-plugin-react-svg')
 
 /**
  * 设置输入输出配置
@@ -28,11 +26,13 @@ const getInputAndOutputConfig = (args) => {
                 // babel文件的设置，会读取根目录的babel.config.js文件配置
                 runtimeHelpers: true,
                 exclude: 'node_modules/**',
+                // rollup can't support for the experiment syntax 'jsx', this is the solution link https://stackoverflow.com/questions/52884278/rollup-react-not-compiling-jsx
+                presets: ['@babel/env', '@babel/preset-react'],
             }),
             commonjs(),
             terser(),
             typescript(),
-            reactSvg(),
+            // reactSvg(),
         ],
     }
     // esm输出的配置

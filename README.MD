@@ -32,6 +32,8 @@ npm run build:rollup button
 
 yarn workspace @dragon/react-button add @dragon/react-theme --dev
 
+yarn workspace @dragon/react-button add @dragon/react-icons --dev
+
 -   if the internal reference is modified, you need to run `yarn run build` or `yarn run build [package name]` like `yarn run build button`.
 
 7. build packages
@@ -66,3 +68,6 @@ yarn build button
 4. An React component is generated in _./components/SvgIcons/_, then you should add an export sentence in the _./components/SvgIcons/index.js_.
 
 [More about svgr](https://react-svgr.com/docs/cli/)
+
+Lerna command
+lerna add module-1 --scope=module-2

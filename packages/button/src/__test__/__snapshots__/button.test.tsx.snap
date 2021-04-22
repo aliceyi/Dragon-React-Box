@@ -53,7 +53,6 @@ exports[`test Button component should render disabled button when disabled set t
   position: relative;
   padding: 0 12px;
   height: 32px;
-  font-family: 'PingFangSC-Regular','sans-serif','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
   font-size: 1rem;
   line-height: 32px;
   outline: none;
@@ -115,7 +114,6 @@ exports[`test Button component should render the correct component based on diff
   position: relative;
   padding: 0 12px;
   height: 32px;
-  font-family: 'PingFangSC-Regular','sans-serif','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
   font-size: 1rem;
   line-height: 32px;
   outline: none;
@@ -176,7 +174,6 @@ exports[`test Button component should render the correct default button 1`] = `
   position: relative;
   padding: 0 12px;
   height: 32px;
-  font-family: 'PingFangSC-Regular','sans-serif','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
   font-size: 1rem;
   line-height: 32px;
   outline: none;
