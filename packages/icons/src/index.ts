@@ -1,5 +1,8 @@
 import { default as IconEdit } from './IconEdit'
-import { default as IconArrow } from './IconArrow'
+import { default as IconArrowRight } from './IconArrowRight'
+import { default as IconArrowLeft } from './IconArrowLeft'
+import { default as IconArrowUp } from './IconArrowUp'
+import { default as IconArrowDown } from './IconArrowRight'
 import { default as IconPlus } from './IconPlus'
 import { default as IconCube } from './IconCube'
 import { default as IconGuide } from './IconGuide'
@@ -19,7 +22,10 @@ import { default as IconRadioUncheck } from './IconRadioUncheck'
 
 export default {
     IconEdit,
-    IconArrow,
+    IconArrowRight,
+    IconArrowLeft,
+    IconArrowUp,
+    IconArrowDown,
     IconPlus,
     IconCube,
     IconGuide,

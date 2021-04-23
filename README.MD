@@ -69,5 +69,9 @@ yarn build button
 
 [More about svgr](https://react-svgr.com/docs/cli/)
 
+#### How to add local dependence
 Lerna command
-lerna add module-1 --scope=module-2
+- lerna add module-1 --scope=module-2
+- yarn install 
+
+#### 

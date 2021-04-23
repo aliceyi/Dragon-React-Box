@@ -1,6 +1,6 @@
 import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 import theme from '@dragon/react-theme'
-// import icons from '@dragon/react-icons'
+import icons from '@dragon/react-icons'
 import styled from 'styled-components'
 
 export interface BaseButtonProps {
@@ -47,11 +47,7 @@ export interface BaseButtonProps {
     /**
      * setting button icon
      */
-    icon?: React.ReactNode
-    /**
-     * only for test and after need remove
-     */
-    onlyTest1?: string
+    icon?: string
     /**
      * setting button click callback
      */
@@ -124,6 +120,11 @@ const buttonBaseStyle = {
         medium: height.m,
         large: height.l,
     },
+    space: {
+        small: space.xsp,
+        medium: space.xsp,
+        large: space.xsp,
+    },
 }
 
 const buttonStyle = (params) => {
@@ -153,6 +154,15 @@ const buttonStyle = (params) => {
         }
     `
 }
+
+// const childStyle = (params) => {
+//     if (params.align === 'right') {
+//         return `
+//             float: right;
+//             margin-left: ${params.space}
+//         `
+//     }
+// }
 
 const DefaultBtn = styled.button`
     display: flex;
@@ -204,6 +214,18 @@ const LinkBtn = styled.a`
     text-align: ${(props) => props.textAlignment};
     display: inline-block;
 `
+const Children = styled.div`
+    & > svg {
+        ${(props) => {
+            const { iconAlignment } = props
+            if (iconAlignment === 'right' || iconAlignment === 'left') {
+                return `
+                        float: ${iconAlignment};
+                    `
+            }
+        }}
+    }
+`
 
 /**
  * Primary UI component for user interaction
@@ -217,14 +239,15 @@ export const Button: FC<ButtonProps> = ({
     disabled = false,
     className,
     textAlignment = 'center',
-    // iconAlignment = 'left',
+    iconAlignment = 'left',
     width = '180px',
     onClick,
+    icon,
 }) => {
     const handleClick = () => {
         onClick && onClick()
     }
-
+    const Icons = icons[icon]
     if (btnType === 'link' && href) {
         return (
             <LinkBtn
@@ -237,7 +260,9 @@ export const Button: FC<ButtonProps> = ({
                 width={width}
                 textAlignment={textAlignment}
             >
-                {children}
+                <Children>
+                    {Icons && <Icons> </Icons>} <span>{children}</span>
+                </Children>
             </LinkBtn>
         )
     } else {
@@ -253,7 +278,9 @@ export const Button: FC<ButtonProps> = ({
                     textAlignment={textAlignment}
                     onClick={handleClick}
                 >
-                    <span>{children}</span>
+                    <Children iconAlignment={iconAlignment}>
+                        {Icons && <Icons> </Icons>} <span>{children}</span>
+                    </Children>
                 </DefaultBtn>
             </div>
         )
