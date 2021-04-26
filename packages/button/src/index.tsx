@@ -120,9 +120,19 @@ const buttonBaseStyle = {
         medium: height.m,
         large: height.l,
     },
-    space: {
+    horizontalSpace: {
         small: space.xsp,
         medium: space.xsp,
+        large: space.xsp,
+    },
+    verticalSpace: {
+        small: space.xxxs,
+        medium: space.xxxs,
+        large: space.xxs,
+    },
+    linkHorizontalSpace: {
+        small: space.xxs,
+        medium: space.xs,
         large: space.xsp,
     },
 }
@@ -217,10 +227,33 @@ const LinkBtn = styled.a`
 const Children = styled.div`
     & > svg {
         ${(props) => {
-            const { iconAlignment } = props
-            if (iconAlignment === 'right' || iconAlignment === 'left') {
+            const { iconAlignment, size, btnType } = props
+            if (iconAlignment === 'right') {
+                if (btnType === 'link') {
+                    return `
+                        float: ${iconAlignment};
+                        height: ${buttonBaseStyle.heights[size]};
+                        margin-left:${buttonBaseStyle.linkHorizontalSpace[size]};
+                    `
+                }
                 return `
                         float: ${iconAlignment};
+                        height: ${buttonBaseStyle.heights[size]};
+                        margin-left:${buttonBaseStyle.horizontalSpace[size]};
+                    `
+            }
+            if (iconAlignment === 'left') {
+                if (btnType === 'link') {
+                    return `
+                        float: ${iconAlignment};
+                        height: ${buttonBaseStyle.heights[size]};
+                        margin-right:${buttonBaseStyle.linkHorizontalSpace[size]};
+                    `
+                }
+                return `
+                        float: ${iconAlignment};
+                        height: ${buttonBaseStyle.heights[size]};
+                        margin-right:${buttonBaseStyle.horizontalSpace[size]};
                     `
             }
         }}
@@ -260,7 +293,7 @@ export const Button: FC<ButtonProps> = ({
                 width={width}
                 textAlignment={textAlignment}
             >
-                <Children>
+                <Children iconAlignment={iconAlignment} size={size} btnType={btnType}>
                     {Icons && <Icons> </Icons>} <span>{children}</span>
                 </Children>
             </LinkBtn>
@@ -278,7 +311,7 @@ export const Button: FC<ButtonProps> = ({
                     textAlignment={textAlignment}
                     onClick={handleClick}
                 >
-                    <Children iconAlignment={iconAlignment}>
+                    <Children iconAlignment={iconAlignment} size={size} btnType={btnType}>
                         {Icons && <Icons> </Icons>} <span>{children}</span>
                     </Children>
                 </DefaultBtn>

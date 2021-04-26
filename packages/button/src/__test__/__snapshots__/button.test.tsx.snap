@@ -30,13 +30,26 @@ exports[`test Button component should render a link when btnType equals link and
   border-color: transparent;
 }
 
+.c1 > svg {
+  float: left;
+  height: 32px;
+  margin-right: 6px;
+}
+
 <a
   class="c0"
   data-testid="link"
   href="http://www.farfetch.com"
   width="180px"
 >
-  Link
+  <div
+    class="c1"
+  >
+     
+    <span>
+      Link
+    </span>
+  </div>
 </a>
 `;
 
@@ -89,15 +102,26 @@ exports[`test Button component should render disabled button when disabled set t
   width: 100%;
 }
 
+.c1 > svg {
+  float: left;
+  height: 32px;
+  margin-right: 8px;
+}
+
 <button
   class="c0"
   data-testid="disabled"
   disabled=""
   width="180px"
 >
-  <span>
-    Disabled
-  </span>
+  <div
+    class="c1"
+  >
+     
+    <span>
+      Disabled
+    </span>
+  </div>
 </button>
 `;
 
@@ -150,14 +174,25 @@ exports[`test Button component should render the correct component based on diff
   width: 100%;
 }
 
+.c1 > svg {
+  float: left;
+  height: 32px;
+  margin-right: 8px;
+}
+
 <button
   class="c0 testBtn"
   data-testid="testProps"
   width="100px"
 >
-  <span>
-    test Props
-  </span>
+  <div
+    class="c1"
+  >
+     
+    <span>
+      test Props
+    </span>
+  </div>
 </button>
 `;
 
@@ -210,13 +245,24 @@ exports[`test Button component should render the correct default button 1`] = `
   width: 100%;
 }
 
+.c1 > svg {
+  float: left;
+  height: 32px;
+  margin-right: 8px;
+}
+
 <button
   class="c0"
   data-testid="default"
   width="180px"
 >
-  <span>
-    Default
-  </span>
+  <div
+    class="c1"
+  >
+     
+    <span>
+      Default
+    </span>
+  </div>
 </button>
 `;
