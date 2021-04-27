@@ -3,6 +3,12 @@ import theme from '@dragon/react-theme'
 import icons from '@dragon/react-icons'
 import styled from 'styled-components'
 
+/**
+ * design standard
+ * icon size : L M S
+ * font size : L M S
+ * icon space : L M S
+ */
 export interface BaseButtonProps {
     /**
      * setting button style
@@ -11,7 +17,7 @@ export interface BaseButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
-    btnType?: 'primary' | 'default' | 'link'
+    btnType?: 'primary' | 'default' | 'link' | 'icon'
     /**
      * How large should the button be?
      */
@@ -33,13 +39,9 @@ export interface BaseButtonProps {
      */
     disabled?: boolean
     /**
-     * setting button  text alignment
+     * setting button icon alignment
      */
-    textAlignment?: 'left' | 'center' | 'right'
-    /**
-     * setting button  icon alignment
-     */
-    iconAlignment?: 'left' | 'right'
+    iconPosition?: 'left' | 'right'
     /**
      * setting button width
      */
@@ -48,6 +50,14 @@ export interface BaseButtonProps {
      * setting button icon
      */
     icon?: string
+    /**
+     * setting svg icon's width
+     */
+    iconWidth?: string
+    /**
+     * setting svg icon's height
+     */
+    iconHeight?: string
     /**
      * setting button click callback
      */
@@ -92,7 +102,7 @@ function LightenDarkenColor(col, amt) {
  * https://github.com/styled-components/styled-components/issues/3117
  */
 
-const { colors, space, fontSizes, fonts, height } = theme
+const { colors, space, fontSizes, fonts, height, width } = theme
 
 const buttonBaseStyle = {
     primary: {
@@ -120,6 +130,21 @@ const buttonBaseStyle = {
         medium: height.m,
         large: height.l,
     },
+    iconWidths: {
+        small: width.m,
+        medium: width.m,
+        large: width.l,
+    },
+    iconHeights: {
+        small: height.l,
+        medium: height.l,
+        large: height.lp,
+    },
+    iconFontSize: {
+        small: fontSizes.xxs,
+        medium: fontSizes.xxs,
+        large: fontSizes.xs,
+    },
     horizontalSpace: {
         small: space.xsp,
         medium: space.xsp,
@@ -134,6 +159,11 @@ const buttonBaseStyle = {
         small: space.xxs,
         medium: space.xs,
         large: space.xsp,
+    },
+    fontSize: {
+        small: fontSizes.xs,
+        medium: '0.9375rem',
+        large: '0.9375rem',
     },
 }
 
@@ -184,7 +214,7 @@ const DefaultBtn = styled.button`
         return buttonBaseStyle.heights[size]
     }};
     font-family: ${fonts.regular};
-    font-size: ${fontSizes.m};
+    font-size: ${(props) => buttonBaseStyle.fontSize[props.size]};
     line-height: ${(props) => {
         const { size } = props
         return buttonBaseStyle.heights[size]
@@ -193,7 +223,6 @@ const DefaultBtn = styled.button`
     overflow: hidden;
     cursor: pointer;
     width: ${(props) => props.width};
-    text-align: ${(props) => props.textAlignment};
     ${(props) => {
         let btnStyle = buttonStyle(buttonBaseStyle.secondary)
         const { btnType, disabled } = props
@@ -221,40 +250,66 @@ const LinkBtn = styled.a`
         return btnStyle
     }}
     width: ${(props) => props.width};
-    text-align: ${(props) => props.textAlignment};
     display: inline-block;
+`
+const IconBtn = styled.div`
+    ${(props) => {
+        let btnStyle = buttonStyle(buttonBaseStyle.link)
+        const { disabled } = props
+
+        if (disabled) {
+            btnStyle = buttonStyle(buttonBaseStyle.disabled)
+        }
+        return btnStyle
+    }}
+    width: ${(props) => buttonBaseStyle.iconWidths[props.size]};
+    border: 0;
+    height: ${(props) => buttonBaseStyle.iconHeights[props.size]};
+    text-align: center;
 `
 const Children = styled.div`
     & > svg {
         ${(props) => {
-            const { iconAlignment, size, btnType } = props
-            if (iconAlignment === 'right') {
+            const { iconPosition, size, btnType } = props
+            if (iconPosition === 'right' && btnType !== 'icon') {
                 if (btnType === 'link') {
                     return `
-                        float: ${iconAlignment};
+                        float: ${iconPosition};
                         height: ${buttonBaseStyle.heights[size]};
                         margin-left:${buttonBaseStyle.linkHorizontalSpace[size]};
                     `
                 }
                 return `
-                        float: ${iconAlignment};
+                        float: ${iconPosition};
                         height: ${buttonBaseStyle.heights[size]};
                         margin-left:${buttonBaseStyle.horizontalSpace[size]};
                     `
             }
-            if (iconAlignment === 'left') {
+            if (iconPosition === 'left' && btnType !== 'icon') {
                 if (btnType === 'link') {
                     return `
-                        float: ${iconAlignment};
+                        float: ${iconPosition};
                         height: ${buttonBaseStyle.heights[size]};
                         margin-right:${buttonBaseStyle.linkHorizontalSpace[size]};
                     `
                 }
                 return `
-                        float: ${iconAlignment};
+                        float: ${iconPosition};
                         height: ${buttonBaseStyle.heights[size]};
                         margin-right:${buttonBaseStyle.horizontalSpace[size]};
                     `
+            }
+        }}
+    }
+    & > span {
+        vertical-align: middle;
+        ${(props) => {
+            const { btnType, size } = props
+            if (btnType === 'icon') {
+                return `
+                    display: block;
+                    font-size: ${buttonBaseStyle.iconFontSize[size]}
+                `
             }
         }}
     }
@@ -271,11 +326,12 @@ export const Button: FC<ButtonProps> = ({
     testData,
     disabled = false,
     className,
-    textAlignment = 'center',
-    iconAlignment = 'left',
+    iconPosition,
     width = '180px',
     onClick,
     icon,
+    iconWidth = '24px',
+    iconHeight = '24px',
 }) => {
     const handleClick = () => {
         onClick && onClick()
@@ -291,12 +347,21 @@ export const Button: FC<ButtonProps> = ({
                 disabled={disabled}
                 size={size}
                 width={width}
-                textAlignment={textAlignment}
             >
-                <Children iconAlignment={iconAlignment} size={size} btnType={btnType}>
-                    {Icons && <Icons> </Icons>} <span>{children}</span>
+                <Children iconPosition={iconPosition} size={size} btnType={btnType}>
+                    {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
+                    <span>{children}</span>
                 </Children>
             </LinkBtn>
+        )
+    } else if (btnType === 'icon') {
+        return (
+            <IconBtn btnType={btnType} size={size}>
+                <Children iconPosition={iconPosition} size={size} btnType={btnType}>
+                    {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
+                    <span>{children}</span>
+                </Children>
+            </IconBtn>
         )
     } else {
         return (
@@ -308,11 +373,11 @@ export const Button: FC<ButtonProps> = ({
                     disabled={disabled}
                     size={size}
                     width={width}
-                    textAlignment={textAlignment}
                     onClick={handleClick}
                 >
-                    <Children iconAlignment={iconAlignment} size={size} btnType={btnType}>
-                        {Icons && <Icons> </Icons>} <span>{children}</span>
+                    <Children iconPosition={iconPosition} size={size} btnType={btnType}>
+                        {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
+                        <span>{children}</span>
                     </Children>
                 </DefaultBtn>
             </div>

@@ -45,6 +45,12 @@ const height = {
     l: '42px',
     m: '32px',
     s: '24px',
+    lp: '54px',
+}
+
+const width = {
+    l: '40px',
+    m: '34px',
 }
 
 const fontSizes = {
@@ -102,6 +108,7 @@ const theme = {
     lineHeights,
     fontSizes,
     height,
+    width,
 }
 
 export default theme

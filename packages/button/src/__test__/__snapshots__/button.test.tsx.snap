@@ -6,7 +6,6 @@ exports[`test Button component should render a link when btnType equals link and
   background-color: transparent;
   border: 1px solid transparent;
   width: 180px;
-  text-align: center;
   display: inline-block;
 }
 
@@ -30,10 +29,8 @@ exports[`test Button component should render a link when btnType equals link and
   border-color: transparent;
 }
 
-.c1 > svg {
-  float: left;
-  height: 32px;
-  margin-right: 6px;
+.c1 > span {
+  vertical-align: middle;
 }
 
 <a
@@ -45,7 +42,6 @@ exports[`test Button component should render a link when btnType equals link and
   <div
     class="c1"
   >
-     
     <span>
       Link
     </span>
@@ -66,13 +62,12 @@ exports[`test Button component should render disabled button when disabled set t
   position: relative;
   padding: 0 12px;
   height: 32px;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 32px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
   width: 180px;
-  text-align: center;
   color: #ffffff;
   background-color: #bfbfbf;
   border: 1px solid #bfbfbf;
@@ -102,10 +97,8 @@ exports[`test Button component should render disabled button when disabled set t
   width: 100%;
 }
 
-.c1 > svg {
-  float: left;
-  height: 32px;
-  margin-right: 8px;
+.c1 > span {
+  vertical-align: middle;
 }
 
 <button
@@ -117,7 +110,6 @@ exports[`test Button component should render disabled button when disabled set t
   <div
     class="c1"
   >
-     
     <span>
       Disabled
     </span>
@@ -138,13 +130,12 @@ exports[`test Button component should render the correct component based on diff
   position: relative;
   padding: 0 12px;
   height: 32px;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 32px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
   width: 100px;
-  text-align: center;
   color: #ffffff;
   background-color: #222222;
   border: 1px solid #222222;
@@ -174,10 +165,8 @@ exports[`test Button component should render the correct component based on diff
   width: 100%;
 }
 
-.c1 > svg {
-  float: left;
-  height: 32px;
-  margin-right: 8px;
+.c1 > span {
+  vertical-align: middle;
 }
 
 <button
@@ -188,7 +177,6 @@ exports[`test Button component should render the correct component based on diff
   <div
     class="c1"
   >
-     
     <span>
       test Props
     </span>
@@ -209,13 +197,12 @@ exports[`test Button component should render the correct default button 1`] = `
   position: relative;
   padding: 0 12px;
   height: 32px;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 32px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
   width: 180px;
-  text-align: center;
   color: #222222;
   background-color: #ffffff;
   border: 1px solid #222222;
@@ -245,10 +232,8 @@ exports[`test Button component should render the correct default button 1`] = `
   width: 100%;
 }
 
-.c1 > svg {
-  float: left;
-  height: 32px;
-  margin-right: 8px;
+.c1 > span {
+  vertical-align: middle;
 }
 
 <button
@@ -259,7 +244,6 @@ exports[`test Button component should render the correct default button 1`] = `
   <div
     class="c1"
   >
-     
     <span>
       Default
     </span>
