@@ -20,7 +20,11 @@ export interface BaseButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
-    btnType?: 'primary' | 'default' | 'link' | 'icon'
+    btnType?: 'button' | 'text' | 'icon'
+    /**
+     * setting button priority
+     */
+    modifier: 'primary' | 'default'
     /**
      * How large should the button be?
      */
@@ -29,10 +33,6 @@ export interface BaseButtonProps {
      * button children node
      */
     children: React.ReactNode
-    /**
-     * when btnType is a link, href have to value
-     */
-    href?: string
     /**
      * setting test id
      */
@@ -145,7 +145,7 @@ const buttonBaseStyle = {
             large: fontSizes.sp,
         },
     },
-    linkButton: {
+    textButton: {
         link: {
             color: colors.dark,
             backgroundColor: 'transparent',
@@ -190,17 +190,17 @@ const buttonBaseStyle = {
         },
         icons: {
             small: width.sp,
-            medium: width.m,
+            medium: width.sp,
             large: width.m,
         },
         space: {
             small: space.xxxs,
-            medium: space.xxs,
+            medium: space.xxxs,
             large: space.xxs,
         },
         fontSize: {
             small: fontSizes.xxs,
-            medium: fontSizes.xs,
+            medium: fontSizes.xxs,
             large: fontSizes.xs,
         },
     },
@@ -264,23 +264,20 @@ const DefaultBtn = styled.button`
     width: ${(props) => props.width};
     ${(props) => {
         let btnStyle = buttonStyle(buttonBaseStyle.secondary)
-        const { btnType, disabled } = props
-        if (btnType !== 'default') {
-            btnStyle = buttonStyle(buttonBaseStyle[btnType])
+        const { modifier, disabled } = props
+        if (modifier !== 'default') {
+            btnStyle = buttonStyle(buttonBaseStyle[modifier])
         }
         if (disabled) {
             btnStyle = buttonStyle(buttonBaseStyle.disabled)
         }
         return btnStyle
     }}
-    & span {
-        width: 100%;
-    }
 `
 
-const LinkBtn = styled.a`
+const TextBtn = styled.a`
     ${(props) => {
-        let btnStyle = buttonStyle(buttonBaseStyle.linkButton.link)
+        let btnStyle = buttonStyle(buttonBaseStyle.textButton.link)
 
         const { disabled } = props
 
@@ -308,47 +305,72 @@ const IconBtn = styled.div`
     text-align: center;
 `
 const Children = styled.div`
+    ${(props) => {
+        if (props.btnType !== 'icon') {
+            return `
+                display: flex;
+                align-items: center;
+            `
+        }
+    }}
     & > svg {
         ${(props) => {
-            const { iconPosition, size, btnType } = props
+            const { iconPosition, size, btnType, iconWidth, iconHeight } = props
             if (iconPosition === 'right' && btnType !== 'icon') {
-                if (btnType === 'link') {
+                if (btnType === 'text') {
                     return `
-                        float: ${iconPosition};
-                        height: ${buttonBaseStyle.linkButton.heights[size]};
-                        margin-left:${buttonBaseStyle.linkButton.space[size]};
+                        width: ${iconWidth || buttonBaseStyle.textButton.icons[size]};
+                        height: ${iconHeight || buttonBaseStyle.textButton.icons[size]};
+                        margin-left:${buttonBaseStyle.textButton.space[size]};
                     `
                 }
                 return `
-                        float: ${iconPosition};
-                        height: ${buttonBaseStyle.button.heights[size]};
+                        width: ${iconWidth || buttonBaseStyle.button.icons[size]};
+                        height: ${iconHeight || buttonBaseStyle.button.icons[size]};
                         margin-left:${buttonBaseStyle.button.space[size]};
+                        flex: 1;
                     `
             }
             if (iconPosition === 'left' && btnType !== 'icon') {
-                if (btnType === 'link') {
+                if (btnType === 'text') {
                     return `
                         float: ${iconPosition};
-                        height: ${buttonBaseStyle.linkButton.heights[size]};
-                        margin-right:${buttonBaseStyle.linkButton.space[size]};
+                        width: ${iconWidth || buttonBaseStyle.textButton.icons[size]};
+                        height: ${iconHeight || buttonBaseStyle.textButton.icons[size]};
+                        margin-right:${buttonBaseStyle.textButton.space[size]};
                     `
                 }
                 return `
                         float: ${iconPosition};
-                        height: ${buttonBaseStyle.button.heights[size]};
+                        width: ${iconWidth || buttonBaseStyle.button.icons[size]};
+                        height: ${iconHeight || buttonBaseStyle.button.icons[size]};
                         margin-right:${buttonBaseStyle.button.space[size]};
+                        flex: 1;
                     `
+            }
+            if (btnType === 'icon') {
+                return `
+                    width: ${iconWidth || buttonBaseStyle.iconButton.icons[size]};
+                    height: ${iconHeight || buttonBaseStyle.iconButton.icons[size]};
+                `
             }
         }}
     }
     & > span {
         vertical-align: middle;
+        white-space: nowrap;
         ${(props) => {
             const { btnType, size } = props
             if (btnType === 'icon') {
                 return `
                     display: block;
-                    font-size: ${buttonBaseStyle.iconButton.fontSize[size]}
+                    font-size: ${buttonBaseStyle.iconButton.fontSize[size]};
+                `
+            }
+            if (btnType === 'text') {
+                return `
+                    line-height: ${buttonBaseStyle.textButton.heights[size]};
+                    font-size: ${buttonBaseStyle.textButton.fontSize[size]}
                 `
             }
         }}
@@ -359,10 +381,9 @@ const Children = styled.div`
  * Primary UI component for user interaction
  */
 export const Button: FC<ButtonProps> = ({
-    btnType = 'default',
+    btnType = 'button',
     children,
     size = 'medium',
-    href,
     testData,
     disabled = false,
     className,
@@ -370,17 +391,17 @@ export const Button: FC<ButtonProps> = ({
     width = '180px',
     onClick,
     icon,
-    iconWidth = '24px',
-    iconHeight = '24px',
+    iconWidth,
+    iconHeight,
+    modifier = 'default',
 }) => {
     const handleClick = () => {
         onClick && onClick()
     }
     const Icons = icons[icon]
-    if (btnType === 'link' && href) {
+    if (btnType === 'text') {
         return (
-            <LinkBtn
-                href={href}
+            <TextBtn
                 className={className}
                 data-testid={testData}
                 btnType={btnType}
@@ -388,16 +409,29 @@ export const Button: FC<ButtonProps> = ({
                 size={size}
                 width={width}
             >
-                <Children iconPosition={iconPosition} size={size} btnType={btnType}>
+                <Children
+                    iconPosition={iconPosition}
+                    size={size}
+                    btnType={btnType}
+                    iconWidth={iconWidth}
+                    iconHeight={iconHeight}
+                >
+                    {iconPosition === 'right' && <span>{children}</span>}
                     {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
-                    <span>{children}</span>
+                    {iconPosition === 'left' && <span>{children}</span>}
                 </Children>
-            </LinkBtn>
+            </TextBtn>
         )
     } else if (btnType === 'icon') {
         return (
-            <IconBtn btnType={btnType} size={size}>
-                <Children iconPosition={iconPosition} size={size} btnType={btnType}>
+            <IconBtn btnType={btnType} size={size} data-testid={testData}>
+                <Children
+                    iconPosition={iconPosition}
+                    size={size}
+                    btnType={btnType}
+                    iconWidth={iconWidth}
+                    iconHeight={iconHeight}
+                >
                     {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
                     <span>{children}</span>
                 </Children>
@@ -414,10 +448,18 @@ export const Button: FC<ButtonProps> = ({
                     size={size}
                     width={width}
                     onClick={handleClick}
+                    modifier={modifier}
                 >
-                    <Children iconPosition={iconPosition} size={size} btnType={btnType}>
+                    <Children
+                        iconPosition={iconPosition}
+                        size={size}
+                        btnType={btnType}
+                        iconWidth={iconWidth}
+                        iconHeight={iconHeight}
+                    >
+                        {iconPosition === 'right' && <span>{children}</span>}
                         {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
-                        <span>{children}</span>
+                        {iconPosition === 'left' && <span>{children}</span>}
                     </Children>
                 </DefaultBtn>
             </div>

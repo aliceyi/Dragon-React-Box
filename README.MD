@@ -4,60 +4,63 @@ rollup 使用总结
 -   公共配置使用项目的根目录
     执行命令
 
-```
-npm run test:rollup button
-
-npm run build:rollup button
-```
-
 #### install
 
 1. install dependence
-   yarn
+
+    `yarn`
 
 2. install all dependence for packages
-   yarn bootstrap
+
+    `yarn bootstrap`
 
 3. run dev
-   yarn dev
+
+    `yarn dev`
 
 4. run document
-   yarn storybook
+
+    `yarn storybook`
 
 5. test
-   yarn test
-   yarn test button
+
+    `yarn test`
+
+    `yarn test button`
 
 6. use `yarn workspace` install some dependence to specifically packages
 
-yarn workspace @dragon/react-button add @dragon/react-theme --dev
-
-yarn workspace @dragon/react-button add @dragon/react-icons --dev
+    `yarn workspace @dragon/react-button add @dragon/react-theme --dev`
 
 -   if the internal reference is modified, you need to run `yarn run build` or `yarn run build [package name]` like `yarn run build button`.
 
 7. build packages
 
-build all packages
-yarn build
+    - build all packages
 
-build signgole package
-yarn build button
+    `yarn build`
+
+    - build signgole package
+
+    `yarn build button`
 
 8. publish
-   lerna publish --yes
+
+    `lerna publish --yes`
 
     - If can not release success last publish, you can use this comment
-      lerna publish from-package --yes
+
+        `lerna publish from-package --yes`
 
     - Forcibly change the version of all packages, regardless of whether they are modified or not
-      lerna publish --force-publish
 
-2. lerna version
+        `lerna publish --force-publish`
 
--   only change version but cant create tag and release tag
-    lerna version --conventional-commits --no-git-tag-version --yes
+9. lerna version
 
+    - only change version but cant create tag and release tag
+
+        `lerna version --conventional-commits --no-git-tag-version --yes`
 
 **Method to add a new icon component**
 
@@ -69,9 +72,10 @@ yarn build button
 
 [More about svgr](https://react-svgr.com/docs/cli/)
 
-#### How to add local dependence
-Lerna command
-- lerna add module-1 --scope=module-2
-- yarn install 
+### How to add local dependence
 
-#### 
+-   Lerna command
+
+    `lerna add module-1 --scope=module-2`
+
+    `yarn install`

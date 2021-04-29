@@ -12,13 +12,13 @@ const defaultProps = {
 const testProps: ButtonProps = {
     width: '100px',
     className: 'testBtn',
-    btnType: 'primary',
+    btnType: 'button',
     testData: 'testProps',
 }
 
 const linkProps: ButtonProps = {
-    btnType: 'link',
-    testData: 'link',
+    btnType: 'text',
+    testData: 'text',
     href: 'http://www.farfetch.com',
 }
 
@@ -49,7 +49,7 @@ describe('test Button component', () => {
     })
     it('should render a link when btnType equals link and href is provided', () => {
         render(<Button {...linkProps}>Link</Button>)
-        const element = screen.getByTestId('link')
+        const element = screen.getByTestId('text')
         expect(element).toBeInTheDocument()
         expect(element.tagName).toEqual('A')
         // expect(element).toHaveClass('ff__button ff__button--link')

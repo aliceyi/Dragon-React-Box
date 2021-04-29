@@ -71,41 +71,6 @@ const fontSizes = {
     xxxxl: '2.875rem',
 }
 
-// const buttonStyle = {
-//     colors: {
-//         primary: {
-//             color: colors.white,
-//             backgroundColor: colors.dark,
-//             borderColor: colors.dark,
-//         },
-//         disabled: {
-//             color: colors.white,
-//             backgroundColor: colors.grey,
-//             borderColor: colors.grey,
-//         },
-//         secondary: {
-//             color: colors.dark,
-//             backgroundColor: colors.white,
-//             borderColor: colors.dark,
-//         },
-//         link: {
-//             color: colors.dark,
-//             backgroundColor: 'transparent',
-//             borderColor: 'transparent',
-//         },
-//     },
-//     space,
-//     fonts,
-//     lineHeights,
-//     fontSizes,
-//     fontWeight,
-//     heights: {
-//         small: space.xl,
-//         medium: space.xxl,
-//         large: space.xxxl,
-//     },
-// }
-
 const theme = {
     colors,
     fontWeight,

@@ -7,16 +7,27 @@ import { Button } from '../../../packages/button/src/index'
 
 # Button
 
-Button is a component
+To trigger a operaion.
 
-With `MDX` we can define a story for `Button` right in the middle of our
-Markdown documentation
+# Install
+
+```
+    yarn add @dragon/react-button
+```
+
+# Import
+
+```
+    import { Button } from @dragon/react-button
+```
 
 # Option
 
 <ArgsTable of={Button} />
 
-# Primary
+# Code Example
+
+### Primary
 
 <!-- why show the MDXCreateElement tag, this is a storybooks issue, you can refer https://github.com/storybookjs/storybook/issues/11542 -->
 
@@ -24,24 +35,156 @@ Markdown documentation
     <Story
         name="Primary"
         args={{
-            btnType: 'primary',
-            children: 'abc',
+            btnType: 'button',
+            children: 'Primary Button',
+            modifier: 'primary',
         }}
     >
         {(args) => <Button {...args} />}
     </Story>
 </Canvas>
 
-# Default
+### Default
 
 <Canvas>
     <Story
-        name="Default"
+        name="Default-large"
         args={{
-            btnType: 'default',
-            children: 'abc',
+            btnType: 'button',
+            children: 'Default Large',
+            modifier: 'default',
+            size: 'large',
         }}
     >
         {(args) => <Button {...args} />}
     </Story>
+    <Story
+        name="Default-medium"
+        args={{
+            btnType: 'button',
+            children: 'Defuault Medium',
+            modifier: 'default',
+            size: 'medium',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+    <Story
+        name="Default-small"
+        args={{
+            btnType: 'button',
+            children: 'Defuault Small',
+            modifier: 'default',
+            size: 'small',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+</Canvas>
+
+### Default Icon button
+
+<Canvas>
+    <Story
+        name="Default-Icon-large"
+        args={{
+            btnType: 'button',
+            children: 'Default Icon Large',
+            modifier: 'default',
+            size: 'large',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+    <Story
+        name="Default-Icon-medium"
+        args={{
+            btnType: 'button',
+            children: 'Default Icon Medium',
+            modifier: 'default',
+            size: 'medium',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+    <Story
+        name="Default-Icon-small"
+        args={{
+            btnType: 'button',
+            children: 'Default Icon Small',
+            modifier: 'default',
+            size: 'small',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+</Canvas>
+
+### Text
+
+<Canvas>
+    <Story
+        name="Text-Icon-large"
+        args={{
+            btnType: 'text',
+            children: 'Text Button Large',
+            size: 'large',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+    <Story
+        name="Text-Icon-medium"
+        args={{
+            btnType: 'text',
+            children: 'Text Button Medium',
+            size: 'medium',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+    <Story
+        name="Text-Icon-small"
+        args={{
+            btnType: 'text',
+            children: 'Text Button Small',
+            size: 'small',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+</Canvas>
+
+### Icon
+
+<Canvas>
+    <Story
+        name="Icon-Button-large"
+        args={{
+            btnType: 'icon',
+            children: 'Large',
+            size: 'large',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+     <Story
+        name="Icon-Button-medium"
+        args={{
+            btnType: 'icon',
+            children: 'Medium1',
+            size: 'medium',
+            icon: 'IconEdit',
+        }}
+    >
+        {(args) => <Button {...args} />}
+    </Story>
+   
 </Canvas>
