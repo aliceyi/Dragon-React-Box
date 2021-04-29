@@ -29,14 +29,34 @@ exports[`test Button component should render a link when btnType equals link and
   border-color: transparent;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
 .c1 > span {
   vertical-align: middle;
+  white-space: nowrap;
+  line-height: 42px;
+  font-size: 0.9375rem;
 }
 
 <a
   class="c0"
-  data-testid="link"
-  href="http://www.farfetch.com"
+  data-testid="text"
   width="180px"
 >
   <div
@@ -61,9 +81,9 @@ exports[`test Button component should render disabled button when disabled set t
   justify-content: center;
   position: relative;
   padding: 0 12px;
-  height: 32px;
+  height: 42px;
   font-size: 0.9375rem;
-  line-height: 32px;
+  line-height: 42px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
@@ -93,12 +113,30 @@ exports[`test Button component should render disabled button when disabled set t
   border-color: #bfbfbf;
 }
 
-.c0 span {
-  width: 100%;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c1 > span {
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 <button
@@ -129,44 +167,62 @@ exports[`test Button component should render the correct component based on diff
   justify-content: center;
   position: relative;
   padding: 0 12px;
-  height: 32px;
+  height: 42px;
   font-size: 0.9375rem;
-  line-height: 32px;
+  line-height: 42px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
   width: 100px;
-  color: #ffffff;
-  background-color: #222222;
+  color: #222222;
+  background-color: #ffffff;
   border: 1px solid #222222;
 }
 
 .c0:hover {
-  color: #ffffff;
-  background: #363636;
+  color: #222222;
+  background: #ffffff;
   border-color: #2c2c2c;
 }
 
 .c0:focus,
 .c0.focus {
-  color: #ffffff;
-  background: #363636;
+  color: #222222;
+  background: #ffffff;
   border-color: #2c2c2c;
 }
 
 .c0:disabled,
 .c0.disabled {
-  color: #ffffff;
-  background: #222222;
+  color: #222222;
+  background: #ffffff;
   border-color: #222222;
 }
 
-.c0 span {
-  width: 100%;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c1 > span {
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 <button
@@ -196,9 +252,9 @@ exports[`test Button component should render the correct default button 1`] = `
   justify-content: center;
   position: relative;
   padding: 0 12px;
-  height: 32px;
+  height: 42px;
   font-size: 0.9375rem;
-  line-height: 32px;
+  line-height: 42px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
@@ -228,12 +284,30 @@ exports[`test Button component should render the correct default button 1`] = `
   border-color: #222222;
 }
 
-.c0 span {
-  width: 100%;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c1 > span {
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 <button
