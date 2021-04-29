@@ -8,6 +8,9 @@ import styled from 'styled-components'
  * icon size : L M S
  * font size : L M S
  * icon space : L M S
+ *
+ *
+ * what is the style when button is link button.
  */
 export interface BaseButtonProps {
     /**
@@ -120,50 +123,86 @@ const buttonBaseStyle = {
         backgroundColor: colors.white,
         borderColor: colors.dark,
     },
-    link: {
-        color: colors.dark,
-        backgroundColor: 'transparent',
-        borderColor: 'transparent',
+    button: {
+        heights: {
+            small: height.m,
+            medium: height.l,
+            large: height.lp,
+        },
+        icons: {
+            small: width.s,
+            medium: width.sp,
+            large: width.sp,
+        },
+        space: {
+            small: space.xsp,
+            medium: space.xsp,
+            large: space.xsp,
+        },
+        fontSize: {
+            small: fontSizes.xs,
+            medium: fontSizes.sp,
+            large: fontSizes.sp,
+        },
     },
-    heights: {
-        small: height.s,
-        medium: height.m,
-        large: height.l,
+    linkButton: {
+        link: {
+            color: colors.dark,
+            backgroundColor: 'transparent',
+            borderColor: 'transparent',
+        },
+        heights: {
+            small: height.m,
+            medium: height.l,
+            large: height.l,
+        },
+        icons: {
+            small: width.xs,
+            medium: width.s,
+            large: width.s,
+        },
+        space: {
+            small: space.xxs,
+            medium: space.xs,
+            large: space.xsp,
+        },
+        fontSize: {
+            small: fontSizes.xs,
+            medium: fontSizes.sp,
+            large: fontSizes.sp,
+        },
     },
-    iconWidths: {
-        small: width.m,
-        medium: width.m,
-        large: width.l,
-    },
-    iconHeights: {
-        small: height.l,
-        medium: height.l,
-        large: height.lp,
-    },
-    iconFontSize: {
-        small: fontSizes.xxs,
-        medium: fontSizes.xxs,
-        large: fontSizes.xs,
-    },
-    horizontalSpace: {
-        small: space.xsp,
-        medium: space.xsp,
-        large: space.xsp,
-    },
-    verticalSpace: {
-        small: space.xxxs,
-        medium: space.xxxs,
-        large: space.xxs,
-    },
-    linkHorizontalSpace: {
-        small: space.xxs,
-        medium: space.xs,
-        large: space.xsp,
-    },
-    fontSize: {
-        small: fontSizes.xs,
-        medium: '0.9375rem',
-        large: '0.9375rem',
+    iconButton: {
+        icon: {
+            color: colors.dark,
+            backgroundColor: 'transparent',
+            borderColor: 'transparent',
+        },
+        width: {
+            small: width.m,
+            medium: width.m,
+            large: width.l,
+        },
+        heights: {
+            small: height.l,
+            medium: height.l,
+            large: height.xl,
+        },
+        icons: {
+            small: width.sp,
+            medium: width.m,
+            large: width.m,
+        },
+        space: {
+            small: space.xxxs,
+            medium: space.xxs,
+            large: space.xxs,
+        },
+        fontSize: {
+            small: fontSizes.xxs,
+            medium: fontSizes.xs,
+            large: fontSizes.xs,
+        },
     },
 }
 
@@ -211,13 +250,13 @@ const DefaultBtn = styled.button`
     padding: 0 ${space.s};
     height: ${(props) => {
         const { size } = props
-        return buttonBaseStyle.heights[size]
+        return buttonBaseStyle.button.heights[size]
     }};
     font-family: ${fonts.regular};
-    font-size: ${(props) => buttonBaseStyle.fontSize[props.size]};
+    font-size: ${(props) => buttonBaseStyle.button.fontSize[props.size]};
     line-height: ${(props) => {
         const { size } = props
-        return buttonBaseStyle.heights[size]
+        return buttonBaseStyle.button.heights[size]
     }};
     outline: none;
     overflow: hidden;
@@ -241,7 +280,8 @@ const DefaultBtn = styled.button`
 
 const LinkBtn = styled.a`
     ${(props) => {
-        let btnStyle = buttonStyle(buttonBaseStyle.link)
+        let btnStyle = buttonStyle(buttonBaseStyle.linkButton.link)
+
         const { disabled } = props
 
         if (disabled) {
@@ -254,7 +294,7 @@ const LinkBtn = styled.a`
 `
 const IconBtn = styled.div`
     ${(props) => {
-        let btnStyle = buttonStyle(buttonBaseStyle.link)
+        let btnStyle = buttonStyle(buttonBaseStyle.iconButton.icon)
         const { disabled } = props
 
         if (disabled) {
@@ -262,9 +302,9 @@ const IconBtn = styled.div`
         }
         return btnStyle
     }}
-    width: ${(props) => buttonBaseStyle.iconWidths[props.size]};
+    width: ${(props) => buttonBaseStyle.iconButton.width[props.size]};
     border: 0;
-    height: ${(props) => buttonBaseStyle.iconHeights[props.size]};
+    height: ${(props) => buttonBaseStyle.iconButton.heights[props.size]};
     text-align: center;
 `
 const Children = styled.div`
@@ -275,28 +315,28 @@ const Children = styled.div`
                 if (btnType === 'link') {
                     return `
                         float: ${iconPosition};
-                        height: ${buttonBaseStyle.heights[size]};
-                        margin-left:${buttonBaseStyle.linkHorizontalSpace[size]};
+                        height: ${buttonBaseStyle.linkButton.heights[size]};
+                        margin-left:${buttonBaseStyle.linkButton.space[size]};
                     `
                 }
                 return `
                         float: ${iconPosition};
-                        height: ${buttonBaseStyle.heights[size]};
-                        margin-left:${buttonBaseStyle.horizontalSpace[size]};
+                        height: ${buttonBaseStyle.button.heights[size]};
+                        margin-left:${buttonBaseStyle.button.space[size]};
                     `
             }
             if (iconPosition === 'left' && btnType !== 'icon') {
                 if (btnType === 'link') {
                     return `
                         float: ${iconPosition};
-                        height: ${buttonBaseStyle.heights[size]};
-                        margin-right:${buttonBaseStyle.linkHorizontalSpace[size]};
+                        height: ${buttonBaseStyle.linkButton.heights[size]};
+                        margin-right:${buttonBaseStyle.linkButton.space[size]};
                     `
                 }
                 return `
                         float: ${iconPosition};
-                        height: ${buttonBaseStyle.heights[size]};
-                        margin-right:${buttonBaseStyle.horizontalSpace[size]};
+                        height: ${buttonBaseStyle.button.heights[size]};
+                        margin-right:${buttonBaseStyle.button.space[size]};
                     `
             }
         }}
@@ -308,7 +348,7 @@ const Children = styled.div`
             if (btnType === 'icon') {
                 return `
                     display: block;
-                    font-size: ${buttonBaseStyle.iconFontSize[size]}
+                    font-size: ${buttonBaseStyle.iconButton.fontSize[size]}
                 `
             }
         }}
@@ -326,7 +366,7 @@ export const Button: FC<ButtonProps> = ({
     testData,
     disabled = false,
     className,
-    iconPosition,
+    iconPosition = 'left',
     width = '180px',
     onClick,
     icon,

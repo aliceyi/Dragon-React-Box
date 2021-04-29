@@ -42,21 +42,27 @@ const lineHeights = {
 }
 
 const height = {
-    l: '42px',
-    m: '32px',
     s: '24px',
-    lp: '54px',
+    sp: '16px',
+    m: '32px',
+    l: '42px',
+    lp: '48px',
+    xl: '54px',
 }
 
 const width = {
     l: '40px',
     m: '34px',
+    sp: '24px',
+    s: '20px',
+    xs: '16px',
 }
 
 const fontSizes = {
     xxs: '0.625rem',
     xs: '0.75rem',
     s: '0.875rem',
+    sp: '0.9375rem',
     m: '1rem',
     l: '1.25rem',
     xl: '1.5rem',
