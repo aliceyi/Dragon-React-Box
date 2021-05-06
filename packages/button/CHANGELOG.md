@@ -3,19 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.2.0](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@dragon/react-button@0.1.2...@dragon/react-button@0.2.0) (2021-05-06)
-
-
-### Features
-
-* **story:** add story for mdx ([f8f6f7d](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/f8f6f7d97f6c05ba8272c68070657a9d4f96938c))
-
-
-
-
-
-# [0.1.3](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@dragon/react-button@0.1.2...@dragon/react-button@0.1.3) (2021-05-06)
-
 ### Features
 
 -   **story:** add story for mdx ([f8f6f7d](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/f8f6f7d97f6c05ba8272c68070657a9d4f96938c))
