@@ -1,6 +1,6 @@
 {
   "name": "@dragon/react-icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -22,9 +22,5 @@
   "license": "MIT",
   "publishConfig": {
     "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1/"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    
   }
 }

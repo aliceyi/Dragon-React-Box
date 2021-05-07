@@ -6,9 +6,9 @@
         },
         "publish": {
             "conventionalCommits": true,
-            "ignoreChanges": ["*.md"],
+            "ignoreChanges": ["*.md", "**/__test__/**"],
             "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1/",
-            "message": "chore: publish"
+            "message": "chore(release): publish %s"
         }
     },
     "npmClient": "yarn",

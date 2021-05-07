@@ -24,8 +24,8 @@
     "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1"
   },
   "dependencies": {
-    "@dragon/react-icons": "^0.0.1",
-    "@dragon/react-theme": "0.1.1",
+    "@dragon/react-icons": "^0.0.2",
+    "@dragon/react-theme": "^0.1.2",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
