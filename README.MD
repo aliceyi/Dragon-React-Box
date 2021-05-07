@@ -79,3 +79,10 @@ rollup 使用总结
     `lerna add module-1 --scope=module-2`
 
     `yarn install`
+
+### How to publish
+- use `version prerelease`
+    `yarn run realease` = `lerna version prerelease --yes`
+- ready use `version`
+    `yarn run realease` = `lerna version --yes`
+    
