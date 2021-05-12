@@ -5,11 +5,20 @@ const babel = require('rollup-plugin-babel') // rollup的babel 插件
 const fs = require('fs')
 // https://github.com/rollup/plugins/tree/master/packages/typescript
 // cant suport declaration
-const typescript = require('@rollup/plugin-typescript')
+// const typescript = require('@rollup/plugin-typescript')
+
 const args = process.argv[2] // 拿到 npm run build packName 中的packName
 // const projectPath = `packages/${args}` // 子包所在的路劲
 const readPackagesDir = fs.readdirSync('./packages') // 自动编译所有包
 
+const typescript = require('rollup-plugin-typescript2')
+// const extensions = ['.js', '.ts', '.tsx']
+
+// // ts
+// const tsPlugin = typescript({
+//     tsconfig: './tsconfig.json', // 导入本地ts配置
+//     extensions,
+// })
 /**
  * 设置输入输出配置
  */
@@ -31,8 +40,10 @@ const getInputAndOutputConfig = (args) => {
             }),
             commonjs(),
             terser(),
-            typescript(),
-            // reactSvg(),
+            typescript({
+                include: [`${projectPath}/src/*`],
+            }),
+            // tsPlugin,
         ],
     }
     // esm输出的配置
