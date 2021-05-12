@@ -14,6 +14,10 @@ import styled from 'styled-components'
  */
 export interface BaseButtonProps {
     /**
+     * Like the original type attribute of the button
+     */
+    type?: 'button' | 'reset' | 'submit'
+    /**
      * setting button style
      */
     className?: string
@@ -394,9 +398,13 @@ export const Button: FC<ButtonProps> = ({
     iconWidth,
     iconHeight,
     modifier = 'default',
+    type = 'button',
 }) => {
-    const handleClick = () => {
-        onClick && onClick()
+    const handleClick = (e) => {
+        if (type !== 'reset' && type !== 'submit') {
+            e.preventDefault()
+        }
+        !disabled && onClick && onClick()
     }
     const Icons = icons[icon]
     if (btnType === 'text') {
@@ -449,6 +457,7 @@ export const Button: FC<ButtonProps> = ({
                     width={width}
                     onClick={handleClick}
                     modifier={modifier}
+                    type={type}
                 >
                     <Children
                         iconPosition={iconPosition}

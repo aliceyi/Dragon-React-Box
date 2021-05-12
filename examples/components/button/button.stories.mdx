@@ -38,6 +38,9 @@ To trigger a operaion.
             btnType: 'button',
             children: 'Primary Button',
             modifier: 'primary',
+            onClick: () => {
+                alert('Primary Button')
+            },
         }}
     >
         {(args) => <Button {...args} />}
@@ -186,5 +189,4 @@ To trigger a operaion.
     >
         {(args) => <Button {...args} />}
     </Story>
-   
 </Canvas>
