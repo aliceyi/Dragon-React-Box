@@ -256,7 +256,7 @@ const DefaultBtn = styled.button`
         const { size } = props
         return buttonBaseStyle.button.heights[size]
     }};
-    font-family: ${fonts.regular};
+    font-family: ${fonts.light};
     font-size: ${(props) => buttonBaseStyle.button.fontSize[props.size]};
     line-height: ${(props) => {
         const { size } = props
@@ -394,7 +394,7 @@ export const Button: FC<ButtonProps> = ({
     iconPosition = 'left',
     width = '180px',
     onClick,
-    icon,
+    icon = '',
     iconWidth,
     iconHeight,
     modifier = 'default',
@@ -447,31 +447,29 @@ export const Button: FC<ButtonProps> = ({
         )
     } else {
         return (
-            <div>
-                <DefaultBtn
-                    className={className}
-                    data-testid={testData}
-                    btnType={btnType}
-                    disabled={disabled}
+            <DefaultBtn
+                className={className}
+                data-testid={testData}
+                btnType={btnType}
+                disabled={disabled}
+                size={size}
+                width={width}
+                onClick={handleClick}
+                modifier={modifier}
+                type={type}
+            >
+                <Children
+                    iconPosition={iconPosition}
                     size={size}
-                    width={width}
-                    onClick={handleClick}
-                    modifier={modifier}
-                    type={type}
+                    btnType={btnType}
+                    iconWidth={iconWidth}
+                    iconHeight={iconHeight}
                 >
-                    <Children
-                        iconPosition={iconPosition}
-                        size={size}
-                        btnType={btnType}
-                        iconWidth={iconWidth}
-                        iconHeight={iconHeight}
-                    >
-                        {iconPosition === 'right' && <span>{children}</span>}
-                        {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
-                        {iconPosition === 'left' && <span>{children}</span>}
-                    </Children>
-                </DefaultBtn>
-            </div>
+                    {iconPosition === 'right' && <span>{children}</span>}
+                    {Icons && <Icons width={iconWidth} height={iconHeight}></Icons>}
+                    {iconPosition === 'left' && <span>{children}</span>}
+                </Children>
+            </DefaultBtn>
         )
     }
 }

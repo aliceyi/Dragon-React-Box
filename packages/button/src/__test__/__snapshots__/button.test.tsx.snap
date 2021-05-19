@@ -82,6 +82,7 @@ exports[`test Button component should render disabled button when disabled set t
   position: relative;
   padding: 0 12px;
   height: 42px;
+  font-family: 'PingFangSC-Light','sans-serif-light','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
   font-size: 0.9375rem;
   line-height: 42px;
   outline: none;
@@ -143,6 +144,7 @@ exports[`test Button component should render disabled button when disabled set t
   class="c0"
   data-testid="disabled"
   disabled=""
+  type="button"
   width="180px"
 >
   <div
@@ -168,6 +170,7 @@ exports[`test Button component should render the correct component based on diff
   position: relative;
   padding: 0 12px;
   height: 42px;
+  font-family: 'PingFangSC-Light','sans-serif-light','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
   font-size: 0.9375rem;
   line-height: 42px;
   outline: none;
@@ -228,6 +231,7 @@ exports[`test Button component should render the correct component based on diff
 <button
   class="c0 testBtn"
   data-testid="testProps"
+  type="button"
   width="100px"
 >
   <div
@@ -253,6 +257,7 @@ exports[`test Button component should render the correct default button 1`] = `
   position: relative;
   padding: 0 12px;
   height: 42px;
+  font-family: 'PingFangSC-Light','sans-serif-light','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
   font-size: 0.9375rem;
   line-height: 42px;
   outline: none;
@@ -313,6 +318,7 @@ exports[`test Button component should render the correct default button 1`] = `
 <button
   class="c0"
   data-testid="default"
+  type="button"
   width="180px"
 >
   <div
