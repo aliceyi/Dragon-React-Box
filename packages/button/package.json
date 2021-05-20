@@ -1,6 +1,6 @@
 {
   "name": "@dragon/react-button",
-  "version": "0.1.3-alpha.1",
+  "version": "0.1.3-alpha.2",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -24,7 +24,7 @@
     "registry": "https://artifacts-we1.farfetch.net/artifactory/api/npm/farfetch-npm-stable-we1"
   },
   "dependencies": {
-    "@dragon/react-icons": "^0.0.3-alpha.1",
+    "@dragon/react-icons": "^0.0.3-alpha.2",
     "@dragon/react-theme": "^0.1.3-alpha.1",
     "styled-components": "^5.2.1"
   },
