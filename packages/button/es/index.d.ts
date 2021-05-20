@@ -1,4 +1,4 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, MouseEvent } from 'react';
 /**
  * design standard
  * icon size : L M S
@@ -64,7 +64,7 @@ export interface BaseButtonProps {
     /**
      * setting button click callback
      */
-    onClick?: () => void;
+    onClick?: (event: MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>) => void;
 }
 declare type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
 declare type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
