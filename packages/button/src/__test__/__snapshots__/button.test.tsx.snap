@@ -177,28 +177,28 @@ exports[`test Button component should render the correct component based on diff
   overflow: hidden;
   cursor: pointer;
   width: 100px;
-  color: #222222;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #222222;
   border: 1px solid #222222;
 }
 
 .c0:hover {
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #363636;
   border-color: #2c2c2c;
 }
 
 .c0:focus,
 .c0.focus {
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #363636;
   border-color: #2c2c2c;
 }
 
 .c0:disabled,
 .c0.disabled {
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #222222;
   border-color: #222222;
 }
 
@@ -264,28 +264,28 @@ exports[`test Button component should render the correct default button 1`] = `
   overflow: hidden;
   cursor: pointer;
   width: 180px;
-  color: #222222;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #222222;
   border: 1px solid #222222;
 }
 
 .c0:hover {
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #363636;
   border-color: #2c2c2c;
 }
 
 .c0:focus,
 .c0.focus {
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #363636;
   border-color: #2c2c2c;
 }
 
 .c0:disabled,
 .c0.disabled {
-  color: #222222;
-  background: #ffffff;
+  color: #ffffff;
+  background: #222222;
   border-color: #222222;
 }
 

@@ -1,4 +1,4 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, MouseEvent } from 'react'
 import theme from '@dragon/react-theme'
 import icons from '@dragon/react-icons'
 import styled from 'styled-components'
@@ -68,7 +68,8 @@ export interface BaseButtonProps {
     /**
      * setting button click callback
      */
-    onClick?: () => void
+    // eslint-disable-next-line no-unused-vars
+    onClick?: (event: MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>) => void
 }
 
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
@@ -397,14 +398,14 @@ export const Button: FC<ButtonProps> = ({
     icon = '',
     iconWidth,
     iconHeight,
-    modifier = 'default',
+    modifier = 'primary',
     type = 'button',
 }) => {
-    const handleClick = (e) => {
+    const handleClick = (e: MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>) => {
         if (type !== 'reset' && type !== 'submit') {
             e.preventDefault()
         }
-        !disabled && onClick && onClick()
+        !disabled && onClick && onClick(e)
     }
     const Icons = icons[icon]
     if (btnType === 'text') {
@@ -416,6 +417,7 @@ export const Button: FC<ButtonProps> = ({
                 disabled={disabled}
                 size={size}
                 width={width}
+                onClick={handleClick}
             >
                 <Children
                     iconPosition={iconPosition}
@@ -432,7 +434,7 @@ export const Button: FC<ButtonProps> = ({
         )
     } else if (btnType === 'icon') {
         return (
-            <IconBtn btnType={btnType} size={size} data-testid={testData}>
+            <IconBtn btnType={btnType} size={size} data-testid={testData} onClick={handleClick}>
                 <Children
                     iconPosition={iconPosition}
                     size={size}
