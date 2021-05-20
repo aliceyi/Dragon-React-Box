@@ -38,6 +38,9 @@ To trigger a operaion.
             btnType: 'button',
             children: 'Primary Button',
             modifier: 'primary',
+            onClick: () => {
+                alert('Primary Button')
+            },
         }}
     >
         {(args) => <Button {...args} />}
@@ -62,7 +65,7 @@ To trigger a operaion.
         name="Default-medium"
         args={{
             btnType: 'button',
-            children: 'Defuault Medium',
+            children: 'Default Medium',
             modifier: 'default',
             size: 'medium',
         }}
@@ -73,7 +76,7 @@ To trigger a operaion.
         name="Default-small"
         args={{
             btnType: 'button',
-            children: 'Defuault Small',
+            children: 'Default Small',
             modifier: 'default',
             size: 'small',
         }}
@@ -186,5 +189,4 @@ To trigger a operaion.
     >
         {(args) => <Button {...args} />}
     </Story>
-   
 </Canvas>

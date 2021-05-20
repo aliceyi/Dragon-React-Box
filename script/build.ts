@@ -43,7 +43,7 @@ const getInputAndOutputConfig = (args) => {
             terser(),
             typescript({
                 include: [`${projectPath}/src/*`],
-                useTsconfigDeclarationDir: true,
+                // useTsconfigDeclarationDir: true,
                 // declarationDir: `${projectPath}/dist/type`,
             }),
             clear({ targets: [`${projectPath}/lib`, `${projectPath}/es`] }),

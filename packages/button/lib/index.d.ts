@@ -10,6 +10,10 @@ import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
  */
 export interface BaseButtonProps {
     /**
+     * Like the original type attribute of the button
+     */
+    type?: 'button' | 'reset' | 'submit';
+    /**
      * setting button style
      */
     className?: string;
