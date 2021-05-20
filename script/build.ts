@@ -3,6 +3,7 @@ const terser = require('rollup-plugin-terser').terser // 压缩代码的插件
 const commonjs = require('rollup-plugin-commonjs') // rollup默认支持es6的模块系统，需要支持commonjs的话需要这个插件
 const babel = require('rollup-plugin-babel') // rollup的babel 插件
 const fs = require('fs')
+const clear = require('rollup-plugin-clear')
 // https://github.com/rollup/plugins/tree/master/packages/typescript
 // cant suport declaration
 // const typescript = require('@rollup/plugin-typescript')
@@ -42,7 +43,10 @@ const getInputAndOutputConfig = (args) => {
             terser(),
             typescript({
                 include: [`${projectPath}/src/*`],
+                // useTsconfigDeclarationDir: true,
+                // declarationDir: `${projectPath}/dist/type`,
             }),
+            clear({ targets: [`${projectPath}/lib`, `${projectPath}/es`] }),
             // tsPlugin,
         ],
     }

@@ -16,6 +16,7 @@
     "module": "esnext",  // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "resolveJsonModule": true,
     "declaration": true,
+    // "declarationDir": "./",
     /* reference https://github.com/TypeStrong/ts-loader/issues/767*/
     "noEmit": false, // 不生成输出文件
     "jsx": "react",
