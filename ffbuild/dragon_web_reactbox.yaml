@@ -1,0 +1,18 @@
+ffbuild_version: 1.0
+version_prefix: 0.0
+tech_spec:
+  tech_version: "12.15-beta"
+build:
+  steps:
+    - bash ffbuild/steps/build.sh
+# branch_deploy_target:
+#   criteria: master
+#   platform: testbed
+#   boundary: ite
+#   name: ite149
+# skip_release_freeze: true
+# tests:  
+#   unit:
+#     steps:
+#       - test "$BRANCH_NAME" = "master" || bash ffbuild/steps/tests_unit.sh
+entrypoint: "bin/start.js"

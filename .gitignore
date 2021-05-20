@@ -24,3 +24,4 @@ yarn-error.log*
 .history/
 dist/*
 packages/**/node_modules/*
+storybook-static/*

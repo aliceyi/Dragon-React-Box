@@ -16,6 +16,7 @@
     "module": "esnext",  // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "resolveJsonModule": true,
     "declaration": true,
+    // "declarationDir": "./",
     /* reference https://github.com/TypeStrong/ts-loader/issues/767*/
     "noEmit": false, // 不生成输出文件
     "jsx": "react",
@@ -26,10 +27,10 @@
     "moduleResolution": "node",  // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
     "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。
   },
-  "include": [
-    "./packages/**/*",
+  "include": [ 
+    // "./packages/**/src/*",
     "./script/*"
   ],
-  "exclude": ["components/**/__tests__", "node_modules"],
+  "exclude": ["components/**/__tests__", "node_modules", "./script/*"],
   "extends": "./paths.json"
 }

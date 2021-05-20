@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Button component should render a link when btnType equals link and href is provided 1`] = `
+.c0 {
+  color: #222222;
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: 180px;
+  display: inline-block;
+}
+
+.c0:hover {
+  color: #222222;
+  background: 141414;
+  border-color: a0a0a;
+}
+
+.c0:focus,
+.c0.focus {
+  color: #222222;
+  background: 141414;
+  border-color: a0a0a;
+}
+
+.c0:disabled,
+.c0.disabled {
+  color: #222222;
+  background: transparent;
+  border-color: transparent;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.c1 > span {
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 42px;
+  font-size: 0.9375rem;
+}
+
+<a
+  class="c0"
+  data-testid="text"
+  width="180px"
+>
+  <div
+    class="c1"
+  >
+    <span>
+      Link
+    </span>
+  </div>
+</a>
+`;
+
+exports[`test Button component should render disabled button when disabled set to true 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+  height: 42px;
+  font-family: 'PingFangSC-Light','sans-serif-light','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+  font-size: 0.9375rem;
+  line-height: 42px;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  width: 180px;
+  color: #ffffff;
+  background-color: #bfbfbf;
+  border: 1px solid #bfbfbf;
+}
+
+.c0:hover {
+  color: #ffffff;
+  background: #d3d3d3;
+  border-color: #c9c9c9;
+}
+
+.c0:focus,
+.c0.focus {
+  color: #ffffff;
+  background: #d3d3d3;
+  border-color: #c9c9c9;
+}
+
+.c0:disabled,
+.c0.disabled {
+  color: #ffffff;
+  background: #bfbfbf;
+  border-color: #bfbfbf;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 > span {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+<button
+  class="c0"
+  data-testid="disabled"
+  disabled=""
+  type="button"
+  width="180px"
+>
+  <div
+    class="c1"
+  >
+    <span>
+      Disabled
+    </span>
+  </div>
+</button>
+`;
+
+exports[`test Button component should render the correct component based on different props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+  height: 42px;
+  font-family: 'PingFangSC-Light','sans-serif-light','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+  font-size: 0.9375rem;
+  line-height: 42px;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100px;
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #222222;
+}
+
+.c0:hover {
+  color: #222222;
+  background: #ffffff;
+  border-color: #2c2c2c;
+}
+
+.c0:focus,
+.c0.focus {
+  color: #222222;
+  background: #ffffff;
+  border-color: #2c2c2c;
+}
+
+.c0:disabled,
+.c0.disabled {
+  color: #222222;
+  background: #ffffff;
+  border-color: #222222;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 > span {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+<button
+  class="c0 testBtn"
+  data-testid="testProps"
+  type="button"
+  width="100px"
+>
+  <div
+    class="c1"
+  >
+    <span>
+      test Props
+    </span>
+  </div>
+</button>
+`;
+
+exports[`test Button component should render the correct default button 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+  height: 42px;
+  font-family: 'PingFangSC-Light','sans-serif-light','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+  font-size: 0.9375rem;
+  line-height: 42px;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  width: 180px;
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #222222;
+}
+
+.c0:hover {
+  color: #222222;
+  background: #ffffff;
+  border-color: #2c2c2c;
+}
+
+.c0:focus,
+.c0.focus {
+  color: #222222;
+  background: #ffffff;
+  border-color: #2c2c2c;
+}
+
+.c0:disabled,
+.c0.disabled {
+  color: #222222;
+  background: #ffffff;
+  border-color: #222222;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > svg {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 > span {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+<button
+  class="c0"
+  data-testid="default"
+  type="button"
+  width="180px"
+>
+  <div
+    class="c1"
+  >
+    <span>
+      Default
+    </span>
+  </div>
+</button>
+`;
