@@ -86,3 +86,10 @@ rollup 使用总结
 - ready use `version`
     `yarn run realease` = `lerna version --yes`
     
+### how to publish npm
+- use `npm login`
+- use `lerna publish`
+
+### how to use travis
+
+`npm push branch`  travis.yml 
