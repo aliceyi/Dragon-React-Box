@@ -85,5 +85,3 @@ rollup 使用总结
     `yarn run realease` = `lerna version prerelease --yes`
 - ready use `version`
     `yarn run realease` = `lerna version --yes`
-
-### how to
