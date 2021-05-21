@@ -1,0 +1,38 @@
+{
+  "name": "@ff-dragon/react-button",
+  "version": "0.2.0-alpha.0",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "source": "./src/index.ts",
+  "files": [
+    "es",
+    "lib",
+    "src",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@ff-dragon/react-icons": "^0.0.3-alpha.2",
+    "@ff-dragon/react-theme": "^0.2.0-alpha.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.3",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "jest-styled-components": "^7.0.3"
+  }
+}

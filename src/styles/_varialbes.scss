@@ -1,0 +1,173 @@
+$color-white:                       #ffffff !default;
+$color-red:                         #fc5d65 !default;
+$color-dark:                        #222222 !default;
+$color-light-grey:                  #f5f5f5 !default;
+$color-grey:                        #bfbfbf !default;
+$color-mid-grey:                    #949494 !default;
+$color-smoke:                       #b6b6b6 !default;
+$color-pale-grey:                   #e6e6e6 !default;
+$color-gold:                        #9c7d31 !default;
+$color-yellow:                      #fcf8e3 !default;
+$pink:                              #d63384 !default;
+
+
+$primary:                           $color-dark !default;
+$secondary:                         $color-white !default;
+$danger:                            $color-red !default;
+// $success:
+// $info:
+// $warning:
+
+$font-family-regular:              'PingFangSC-Regular', 'sans-serif', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial !default;
+$font-family-medium:               'PingFangSC-Medium', 'sans-serif-medium', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial !default;
+$font-family-light:                'PingFangSC-Light', 'sans-serif-light', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial !default;
+$font-family-semibold:             'PingFangSC-Semibold', 'sans-serif-black', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial !default;
+$font-family-polc:                 'PolarisCondensed' !default;
+
+
+$font-size-10:                     10px !default;
+$font-size-12:                     12px !default;
+$font-size-14:                     14px !default;
+$font-size-15:                     15px !default;
+$font-size-18:                     18px !default;
+$font-size-23:                     23px !default;
+$font-size-26:                     26px !default;
+
+$font-size-base:                   $font-size-15 !default;
+$font-size-lg:                     $font-size-base * 1.25 !default;
+$font-size-sm:                     $font-size-base * .875 !default;
+
+$small-font-size:                 .875em !default;
+
+$sub-sup-font-size:               .75em !default;
+
+$font-weight-lighter:              lighter !default;
+$font-weight-light:                300 !default;
+$font-weight-normal:               400 !default;
+$font-weight-bold:                 700 !default;
+$font-weight-bolder:               bolder !default;
+$font-weight-base:                 $font-weight-normal !default;
+
+
+$line-height-16:                   16px !default;
+$line-height-18:                   18px !default;
+$line-height-22:                   22px !default;
+$line-height-28:                   28px !default;
+$line-height-32:                   32px !default;
+$line-height-42:                   42px !default;
+$line-height-48:                   48px !default;
+$line-height-base:                 1.5 !default;
+$line-height-lg:                   2 !default;
+$line-height-sm:                   1.25 !default;
+
+$h1-font-size:                     $font-size-base * 2.5 !default;
+$h2-font-size:                     $font-size-base * 2 !default;
+$h3-font-size:                     $font-size-base * 1.75 !default;
+$h4-font-size:                     $font-size-base * 1.5 !default;
+$h5-font-size:                     $font-size-base * 1.25 !default;
+$h6-font-size:                     $font-size-base !default;
+
+$size-l:                           48px !default;
+$size-m:                           24px !default;
+$size-sp:                          16px !default;
+$size-s:                           12px !default;
+$size-xsp:                         8px !default;
+$size-xs:                          6px !default;
+$size-xxs:                         4px !default;
+$size-xxxs:                        2px !default;
+
+$size-l-fixed:                     48PX !default;
+$size-m-fixed:                     24PX !default;
+$size-s-fixed:                     12PX !default;
+$size-xsp-fixed:                   8PX !default;
+$size-xs-fixed:                    6PX !default;
+$size-xxs-fixed:                   4PX !default;
+$size-xxxs-fixed:                  2PX !default;
+
+
+$link-color:                       $primary !default;
+$link-decoration:                  none !default;
+$link-hover-color:                 darken($link-color, 15%) !default;
+$link-hover-decoration:            underline !default;
+
+$body-bg:                          $color-white !default;
+// $body-color:
+$body-text-align:                   null !default;
+
+// Spacing
+$spacer:                            12px !default;
+
+// heading
+$headings-margin-bottom:            $spacer / 2 !default;
+$headings-font-family:              null !default;
+$headings-font-style:               null !default;
+$headings-font-weight:              500 !default;
+$headings-line-height:              1.2 !default;
+$headings-color:                    null !default;
+
+
+$hr-margin-y:                       $spacer !default;
+$hr-color:                          inherit !default;
+$hr-height:                         1px !default;
+$hr-opacity:                        .25 !default;
+
+// Paragraphs
+
+$paragraph-margin-bottom:           12px !default;
+
+$dt-font-weight:                    $font-weight-bold !default;
+
+
+// Code
+
+$code-font-size:                    $small-font-size !default;
+$code-color:                        $pink !default;
+$pre-color:                         null !default;
+
+// Legend
+$legend-margin-bottom:               .5rem !default;
+$legend-font-size:                   1.5rem !default;
+$legend-font-weight:                 null !default;
+
+
+$mark-padding:                      .2em !default;
+$mark-bg:                           $color-yellow !default;
+
+
+// Options 可配置选项
+$enable-pointer-cursor-for-buttons:  true !default;
+
+
+// Button
+
+// Base property
+$btn-font-weight:                    400;
+$btn-padding-y:                      .375rem !default;
+$btn-padding-x:                      .75rem !default;
+$btn-font-family:                    $font-family-semibold !default;
+$btn-font-size:                      $font-size-15 !default;
+$btn-font-color-dark:                $color-dark !default;
+$btn-font-color-white:               $color-white !default;
+$btn-small-line-height:              $line-height-32 !default;
+$btn-line-height:                    $line-height-42 !default;
+$btn-large-line-height:              $line-height-48 !default;
+
+$btn-border-dark:                    $color-dark !default;
+$btn-border-disabled:                $color-grey !default;
+$btn-background-color-dark:          $color-dark !default;
+$btn-background-color-white:         $color-white !default;
+$btn-background-color-disabled:      $color-grey !default;
+
+
+//different size button's font size
+$btn-font-size-sm:                   $font-size-sm !default;
+
+$btn-font-size-lg:                   $font-size-lg !default;
+
+// 链接按钮
+$btn-link-color:                     currentColor !default;
+$btn-link-hover-color:               currentColor !default;
+$btn-link-disabled-color:            $color-grey !default;
+
+
+$btn-transition:                     color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;

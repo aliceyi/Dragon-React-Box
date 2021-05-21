@@ -1,0 +1,27 @@
+{
+  "name": "@ff-dragon/react-icons",
+  "version": "0.0.3-alpha.2",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "source": "./src/index.ts",
+  "files": [
+    "es",
+    "lib",
+    "src",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

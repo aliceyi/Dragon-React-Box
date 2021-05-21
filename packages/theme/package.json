@@ -1,0 +1,21 @@
+{
+  "name": "@ff-dragon/react-theme",
+  "version": "0.2.0-alpha.0",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "source": "./src/index.ts",
+  "files": [
+    "es",
+    "lib",
+    "src",
+    "README.md"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "styled-components": "^5.2.1"
+  }
+}

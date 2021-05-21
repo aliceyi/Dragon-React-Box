@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 2</title>
+    <g id="SC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SC_Affiliate-/-Maintenance-" transform="translate(-164.000000, -217.000000)">
+            <g id="编组" transform="translate(24.000000, 217.000000)">
+                <g id="编组-2" transform="translate(140.000000, 0.000000)">
+                    <rect id="矩形" fill="#FFFFFF" x="0" y="0" width="48" height="48"></rect>
+                    <g id="icon-/-time" transform="translate(4.000000, 4.000000)" fill="#222222">
+                        <path d="M40,17.07828 L40,11.26956 L22.64348,11.26956 C17.5652,11.26956 14.74784,14.33044 14.74784,18.74784 L14.74784,22.46956 L7.2,22.46956 L7.2,14.33044 C7.2,8.62608 7.75652,5.87828 14.22608,5.87828 L40,5.87828 L40,0 L10.4348,0 C3.895652,0 0,4.31304 0,10.64348 L0,40 L7.2,40 L7.2,28.27824 L14.74784,28.27824 L14.74784,40 L21.9826,40 L21.9826,28.27824 L40,28.27824 L40,22.46956 L21.9826,22.46956 L21.9826,20.52172 C21.9826,18.08696 22.3652,17.07828 25.73912,17.07828 L40,17.07828 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

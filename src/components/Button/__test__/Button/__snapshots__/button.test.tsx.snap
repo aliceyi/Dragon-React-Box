@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Button component should render a link when btnType equals link and href is provided 1`] = `
+<a
+  class="ff__button ff__button--link ff__button--medium ff__button--text-center ff__button--icon-left"
+  data-testid="link"
+  href="http://www.farfetch.com"
+  style="width: 180px;"
+>
+  Link
+</a>
+`;
+
+exports[`test Button component should render disabled button when disabled set to true 1`] = `
+<button
+  class="ff__button ff__button--default ff__button--disabled ff__button--medium ff__button--text-center ff__button--icon-left"
+  data-testid="disabled"
+  disabled=""
+  style="width: 180px;"
+>
+  <span
+    class="content"
+  >
+    Disabled
+  </span>
+</button>
+`;
+
+exports[`test Button component should render the correct component based on different props 1`] = `
+<button
+  class="ff__button testBtn ff__button--primary ff__button--medium ff__button--text-center ff__button--icon-left"
+  data-testid="testProps"
+  style="width: 100px;"
+>
+  <span
+    class="content"
+  >
+    test Props
+  </span>
+</button>
+`;
+
+exports[`test Button component should render the correct default button 1`] = `
+<button
+  class="ff__button ff__button--default ff__button--medium ff__button--text-center ff__button--icon-left"
+  data-testid="default"
+  style="width: 180px;"
+>
+  <span
+    class="content"
+  >
+    Default
+  </span>
+</button>
+`;
