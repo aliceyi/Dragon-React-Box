@@ -8,6 +8,9 @@ import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes, MouseEvent } fro
  *
  * what is the style when button is link button.
  */
+declare type buttonEvent = (event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => void;
+declare type divEvent = (event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => void;
+declare type anchorEvent = (event: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => void;
 export interface BaseButtonProps {
     /**
      * Like the original type attribute of the button
@@ -64,7 +67,7 @@ export interface BaseButtonProps {
     /**
      * setting button click callback
      */
-    onClick?: (event: MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>) => void;
+    onClick?: buttonEvent | divEvent | anchorEvent;
 }
 declare type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
 declare type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;

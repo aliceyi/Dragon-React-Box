@@ -12,6 +12,9 @@ import styled from 'styled-components'
  *
  * what is the style when button is link button.
  */
+type buttonEvent = (event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => void
+type divEvent = (event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => void
+type anchorEvent = (event: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => void
 export interface BaseButtonProps {
     /**
      * Like the original type attribute of the button
@@ -69,7 +72,7 @@ export interface BaseButtonProps {
      * setting button click callback
      */
     // eslint-disable-next-line no-unused-vars
-    onClick?: (event: MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>) => void
+    onClick?: buttonEvent | divEvent | anchorEvent
 }
 
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
