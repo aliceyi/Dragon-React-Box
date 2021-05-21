@@ -30,4 +30,3 @@ deploy:
 #     skip_cleanup: true
 #     on:
 #       branch: feature-lerna
-# publish
