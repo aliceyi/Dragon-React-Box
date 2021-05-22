@@ -1,6 +1,6 @@
 {
   "name": "@ff-dragon/react-button",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.0-alpha.1",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -25,8 +25,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@ff-dragon/react-icons": "^0.0.3-alpha.2",
-    "@ff-dragon/react-theme": "^0.2.0-alpha.0",
+    "@ff-dragon/react-icons": "^0.0.3-alpha.3",
+    "@ff-dragon/react-theme": "^0.2.0-alpha.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
