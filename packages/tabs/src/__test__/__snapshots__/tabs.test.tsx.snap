@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Tabs component get a render total number of tab item 1`] = `
+Array [
+  .c0 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c0:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+    class="c0"
+    data-active="false"
+    data-index="0"
+    data-tab-id="ffTabs"
+    id="ffTabs_0"
+  >
+    时尚tips
+  </div>,
+  .c0 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c0:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+    class="c0"
+    data-active="true"
+    data-index="1"
+    data-tab-id="ffTabs"
+    id="ffTabs_1"
+  >
+    时尚帮助 tips
+  </div>,
+  .c0 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c0:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+    class="c0"
+    data-active="false"
+    data-index="2"
+    data-tab-id="ffTabs"
+    id="ffTabs_2"
+  >
+    时尚达人风采
+  </div>,
+  .c0 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c0:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+    class="c0"
+    data-active="false"
+    data-index="3"
+    data-tab-id="ffTabs"
+    id="ffTabs_3"
+  >
+    时尚达人
+  </div>,
+]
+`;
+
+exports[`test Tabs component get the tabs width 1`] = `
+.c0 {
+  width: 375px;
+  background-color: #ffffff;
+  overflow: hidden;
+  z-index: 2;
+  padding: 12px 0;
+}
+
+.c1 {
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  white-space: nowrap;
+  position: relative;
+  height: 28px;
+  overflow: hidden;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-x: auto;
+}
+
+.c1::-webkit-scrollbar {
+  display: none;
+}
+
+.c1>div:nth-child(2) {
+  margin-left: 24px;
+}
+
+.c1 > div:nth-last-child(1) {
+  margin-right: 24px;
+}
+
+.c2 {
+  height: 4px;
+  width: 60px;
+  background: #222222;
+  -webkit-transition-property: right,left,width;
+  transition-property: right,left,width;
+  -webkit-transition-property: right,left,width;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
+.c3 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c3:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+  class="c0"
+  data-testid="tab-test-has-data"
+  width="375px"
+>
+  <div
+    class="c1"
+    data="[object Object],[object Object],[object Object],[object Object]"
+  >
+    <div
+      class="c2"
+      style="left: 0px; width: 0px;"
+    />
+    <div
+      class="c3"
+      data-active="false"
+      data-index="0"
+      data-tab-id="ffTabs"
+      id="ffTabs_0"
+    >
+      时尚tips
+    </div>
+    <div
+      class="c3"
+      data-active="true"
+      data-index="1"
+      data-tab-id="ffTabs"
+      id="ffTabs_1"
+    >
+      时尚帮助 tips
+    </div>
+    <div
+      class="c3"
+      data-active="false"
+      data-index="2"
+      data-tab-id="ffTabs"
+      id="ffTabs_2"
+    >
+      时尚达人风采
+    </div>
+    <div
+      class="c3"
+      data-active="false"
+      data-index="3"
+      data-tab-id="ffTabs"
+      id="ffTabs_3"
+    >
+      时尚达人
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test Tabs component should click tab to have been called 1`] = `
+.c0 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c0:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+  class="c0"
+  data-active="true"
+  data-index="0"
+  data-tab-id="ffTabs"
+  id="ffTabs_0"
+>
+  时尚tips
+</div>
+`;
+
+exports[`test Tabs component should render the correct default tabs 1`] = `
+.c0 {
+  width: 375px;
+  background-color: #ffffff;
+  overflow: hidden;
+  z-index: 2;
+  padding: 12px 0;
+}
+
+.c1 {
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  white-space: nowrap;
+  position: relative;
+  height: 28px;
+  overflow: hidden;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-x: auto;
+}
+
+.c1::-webkit-scrollbar {
+  display: none;
+}
+
+.c1>div:nth-child(2) {
+  margin-left: 24px;
+}
+
+.c1 > div:nth-last-child(1) {
+  margin-right: 24px;
+}
+
+.c2 {
+  height: 4px;
+  width: 60px;
+  background: #222222;
+  -webkit-transition-property: right,left,width;
+  transition-property: right,left,width;
+  -webkit-transition-property: right,left,width;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
+.c3 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-left: 48px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'PingFangSC-Semibold','sans-serif-black','Helvetica Neue For Number','-apple-system',BlinkMacSystemFont,'Segoe UI',Roboto,'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial;
+}
+
+.c3:nth-last-child(1) {
+  margin-right: 48px;
+}
+
+<div
+  class="c0"
+  data-testid="tab-test-has-data"
+  width="375px"
+>
+  <div
+    class="c1"
+    data="[object Object],[object Object],[object Object],[object Object]"
+  >
+    <div
+      class="c2"
+      style="left: 0px; width: 0px;"
+    />
+    <div
+      class="c3"
+      data-active="false"
+      data-index="0"
+      data-tab-id="ffTabs"
+      id="ffTabs_0"
+    >
+      时尚tips
+    </div>
+    <div
+      class="c3"
+      data-active="true"
+      data-index="1"
+      data-tab-id="ffTabs"
+      id="ffTabs_1"
+    >
+      时尚帮助 tips
+    </div>
+    <div
+      class="c3"
+      data-active="false"
+      data-index="2"
+      data-tab-id="ffTabs"
+      id="ffTabs_2"
+    >
+      时尚达人风采
+    </div>
+    <div
+      class="c3"
+      data-active="false"
+      data-index="3"
+      data-tab-id="ffTabs"
+      id="ffTabs_3"
+    >
+      时尚达人
+    </div>
+  </div>
+</div>
+`;

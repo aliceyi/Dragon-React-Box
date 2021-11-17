@@ -29,6 +29,7 @@ rollup 使用总结
     `yarn test button`
 
 6. use `yarn workspace` install some dependence to specifically packages
+   `yarn workspace [package.json name] add [new package.json name] --dev`
 
     `yarn workspace @dragon/react-button add @dragon/react-theme --dev`
 
@@ -81,15 +82,17 @@ rollup 使用总结
     `yarn install`
 
 ### How to publish
-- use `version prerelease`
+
+-   use `version prerelease`
     `yarn run realease` = `lerna version prerelease --yes`
-- ready use `version`
+-   ready use `version`
     `yarn run realease` = `lerna version --yes`
-    
+
 ### how to publish npm
-- use `npm login`
-- use `lerna publish`
+
+-   use `npm login`
+-   use `lerna publish`
 
 ### how to use travis
 
-`npm push branch`  travis.yml 
+`npm push branch` travis.yml

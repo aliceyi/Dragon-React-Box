@@ -1,0 +1,50 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import { Tabs } from '../../../packages/tabs/src/index'
+
+<Meta title="MDX/Tabs" component={Tabs} />
+
+<!--- This is your Story template function, shown here in React -->
+
+# Icon
+
+Default Tabs in the system.
+
+# Install
+
+```
+    yarn add @ff-dragon/react-tabs
+```
+
+# Import
+
+```
+    import Tabs from @ff-dragon/react-tabs
+```
+
+# Option
+
+<ArgsTable of={Tabs} />
+
+# Code Example
+
+### Tabs
+
+<!-- why show the MDXCreateElement tag, this is a storybooks issue, you can refer https://github.com/storybookjs/storybook/issues/11542 -->
+
+<Canvas>
+    <Story
+        name="Tabs"
+        args={{
+            isSticky: true,
+            width: '375px',
+            data: [
+                { name: '时尚tips' },
+                { name: '帮助 tips' },
+                { name: '达人风采' },
+                { name: '达人风采1' },
+            ],
+        }}
+    >
+        {(args) => <Tabs {...args} />}
+    </Story>
+</Canvas>

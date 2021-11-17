@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { default as IconEdit } from './IconEdit';
 import { default as IconArrowRight } from './IconArrowRight';
 import { default as IconArrowLeft } from './IconArrowLeft';
@@ -18,7 +19,17 @@ import { default as IconLoading } from './IconLoading';
 import { default as IconF } from './IconF';
 import { default as IconRadioCheck } from './IconRadioCheck';
 import { default as IconRadioUncheck } from './IconRadioUncheck';
-declare const _default: {
+export interface Props {
+    /**
+     * Set Icon type to display
+     */
+    type?: 'IconEdit' | 'IconArrowRight' | 'IconArrowLeft' | 'IconArrowUp' | 'IconArrowDown' | 'IconPlus' | 'IconCube' | 'IconGuide' | 'IconMoney' | 'IconCommission' | 'IconClose' | 'IconConfirm' | 'IconTime' | 'IconHelp' | 'IconGalaxy' | 'IconWarning' | 'IconTick' | 'IconLoading' | 'IconF' | 'IconRadioCheck' | 'IconRadioUncheck';
+    /**
+     * Like the original type attribute of the SVG
+     */
+    className?: string;
+}
+declare const iconItems: {
     IconEdit: typeof IconEdit;
     IconArrowRight: typeof IconArrowRight;
     IconArrowLeft: typeof IconArrowLeft;
@@ -41,4 +52,5 @@ declare const _default: {
     IconRadioCheck: typeof IconRadioCheck;
     IconRadioUncheck: typeof IconRadioUncheck;
 };
-export default _default;
+export default iconItems;
+export declare const Icons: FC<Props>;

@@ -31,7 +31,7 @@ const fonts = {
     // regular: `'PingFangSC-Regular', 'sans-serif', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
     // medium: `'PingFangSC-Medium', 'sans-serif-medium', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
     light: `'PingFangSC-Light', 'sans-serif-light', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
-    semibold: `PingFangSC-Semibold', 'sans-serif-black', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
+    semibold: `'PingFangSC-Semibold', 'sans-serif-black', 'Helvetica Neue For Number', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial`,
     // polc: 'PolarisCondensed',
 }
 

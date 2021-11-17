@@ -1,0 +1,27 @@
+15 error Error: Command failed: git remote update
+15 error ssh: connect to host gitlab.fftech.info port 22: Operation timed out
+15 error fatal: 无法读取远程仓库。
+15 error
+15 error 请确认您有正确的访问权限并且仓库存在。
+15 error error: 不能获取 origin
+15 error Warning: Permanently added the RSA host key for IP address '20.205.243.166' to the list of known hosts.
+15 error 来自 github.com:aliceyi/dragon-react-box
+15 error  + 39ea202...78c184d feature-lerna -> upstream/feature-lerna  (强制更新)
+15 error  + bd245d4...82d184e gh-pages      -> upstream/gh-pages  (强制更新)
+15 error  * [新分支]          main          -> upstream/main
+15 error  * [新标签]          @ff-dragon/react-button@0.2.0-alpha.1 -> @ff-dragon/react-button@0.2.0-alpha.1
+15 error  * [新标签]          @ff-dragon/react-button@0.2.0-alpha.2 -> @ff-dragon/react-button@0.2.0-alpha.2
+15 error  * [新标签]          @ff-dragon/react-icons@0.0.3-alpha.3 -> @ff-dragon/react-icons@0.0.3-alpha.3
+15 error  * [新标签]          @ff-dragon/react-icons@0.0.3-alpha.4 -> @ff-dragon/react-icons@0.0.3-alpha.4
+15 error  * [新标签]          @ff-dragon/react-theme@0.2.0-alpha.1 -> @ff-dragon/react-theme@0.2.0-alpha.1
+15 error  * [新标签]          @ff-dragon/react-theme@0.2.0-alpha.2 -> @ff-dragon/react-theme@0.2.0-alpha.2
+15 error
+15 error 正在获取 origin
+15 error 正在获取 upstream
+15 error
+15 error     at makeError (/Users/aliceyi/Downloads/work/farfetch/dragon-react-box/node_modules/execa/index.js:174:9)
+15 error     at Function.module.exports.sync (/Users/aliceyi/Downloads/work/farfetch/dragon-react-box/node_modules/execa/index.js:338:15)
+15 error     at Object.execSync (/Users/aliceyi/Downloads/work/farfetch/dragon-react-box/node_modules/@lerna/child-process/index.js:26:16)
+15 error     at updateRemote (/Users/aliceyi/Downloads/work/farfetch/dragon-react-box/node_modules/@lerna/version/lib/is-behind-upstream.js:26:16)
+15 error     at isBehindUpstream (/Users/aliceyi/Downloads/work/farfetch/dragon-react-box/node_modules/@lerna/version/lib/is-behind-upstream.js:11:3)
+15 error     at VersionCommand.initialize (/Users/aliceyi/Downloads/work/farfetch/dragon-react-box/node_modules/@lerna/version/index.js:154:9)
