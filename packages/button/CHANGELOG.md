@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0-alpha.1 (2021-11-18)
+
+
+### Features
+
+* **story:** add story for mdx ([f8f6f7d](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/f8f6f7d97f6c05ba8272c68070657a9d4f96938c))
+
+
+
+
+
 # 0.2.0-alpha.0 (2021-05-20)
 
 
