@@ -206,7 +206,6 @@ export const Tabs: FC<TabsProps> = ({
     ) => {
         setPosition(event.currentTarget)
         setActiveIndex(index)
-        console.log(index, '====')
         onClick && onClick(event, index)
     }
     const activeTab = () => {
