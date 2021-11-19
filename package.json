@@ -21,6 +21,7 @@
     "test": "node script/test.ts",
     "dev": "start-storybook -p 6006",
     "release": "lerna version prerelease --yes",
+    "publish": "lerna publish from-package --yes",
     "start": "node bin/start",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext js,ts,tsx src",
