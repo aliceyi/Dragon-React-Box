@@ -221,7 +221,7 @@ export const Tabs: FC<TabsProps> = ({
         activeTab()
     }, [])
 
-    let resetTabTimer: NodeJS.Timeout | null = null
+    let resetTabTimer: null | ReturnType<typeof setTimeout> = null
 
     const resetTabScroll = () => {
         if (!isScroll.current) isScroll.current = true
