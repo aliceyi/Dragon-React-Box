@@ -28,8 +28,17 @@ deploy:
     provider: npm
     email: "$NPM_EMAIL"
     api_key: "$NPM_TOKEN"
+    skip_cleanup: true
+    on:
+        branch: feature-lerna
     provider: script
     script: 'yarn run lerna:publish'
     skip_cleanup: true
+    on:
+        branch: feature-lerna
+    provider: pages
+    skip_cleanup: true
+    github_token: $github_token # Set in the settings page of your repository, as a secure variable
+    local_dir: storybook-static
     on:
         branch: feature-lerna
