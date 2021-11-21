@@ -10,7 +10,7 @@ const clear = require('rollup-plugin-clear')
 
 const args = process.argv[2] // 拿到 npm run build packName 中的packName
 // const projectPath = `packages/${args}` // 子包所在的路劲
-const readPackagesDir = fs.readdirSync('./packages') // 自动编译所有包
+const readPackagesDir = fs.readdirSync('./packages').filter((item) => item !== '.DS_Store') // 自动编译所有包
 
 const typescript = require('rollup-plugin-typescript2')
 // const extensions = ['.js', '.ts', '.tsx']
@@ -91,7 +91,8 @@ async function build() {
         buildPackage(options)
         return
     }
-    readPackagesDir.forEach((args) => {
+    readPackagesDir.forEach((args, index) => {
+        console.log(args, index, 'args==')
         const options = getInputAndOutputConfig(args)
         buildPackage(options)
     })
