@@ -22,7 +22,7 @@ before_install:
 before_script:
     - yarn run lerna run prepublishOnly
 before_deploy:
-    - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+    # - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 
 deploy:
     provider: npm
