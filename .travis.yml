@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - 'stable'
+    - '14.17'
 cache:
     yarn: true
     directories:
@@ -8,8 +8,6 @@ cache:
 env:
     - CI=true
 script:
-    - nvm install v14.17.0
-    - nvm use v14.17.0
     - yarn run build-storybook
 # deploy:
 #     provider: pages
@@ -24,11 +22,14 @@ before_install:
 before_script:
     - yarn run lerna run prepublishOnly
 before_deploy:
-    - echo "//registry.npmjs.org/:_authToken=\${npm_token}" >> $HOME/.npmrc 2> /dev/null
+    - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 
 deploy:
+    provider: npm
+    email: "$NPM_EMAIL"
+    api_key: "$NPM_TOKEN"
     provider: script
-    script: 'yarn run publish'
+    script: 'yarn run lerna:publish'
     skip_cleanup: true
     on:
         branch: feature-lerna
