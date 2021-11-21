@@ -8,6 +8,8 @@ cache:
 env:
     - CI=true
 script:
+    - nvm install v14.17.0
+    - nvm use v14.17.0
     - yarn run build-storybook
 # deploy:
 #     provider: pages
@@ -26,7 +28,7 @@ before_deploy:
 
 deploy:
     provider: script
-    script: 'yarn run lerna:publish'
+    script: 'yarn run publish'
     skip_cleanup: true
     on:
         branch: feature-lerna
