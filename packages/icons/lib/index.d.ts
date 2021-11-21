@@ -29,7 +29,7 @@ export interface Props {
      */
     className?: string;
 }
-declare const iconItems: {
+declare const IconItems: {
     IconEdit: typeof IconEdit;
     IconArrowRight: typeof IconArrowRight;
     IconArrowLeft: typeof IconArrowLeft;
@@ -52,5 +52,5 @@ declare const iconItems: {
     IconRadioCheck: typeof IconRadioCheck;
     IconRadioUncheck: typeof IconRadioUncheck;
 };
-export default iconItems;
+export default IconItems;
 export declare const Icons: FC<Props>;
