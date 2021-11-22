@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.1](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@ff-dragon/react-icons@0.1.0-alpha.0...@ff-dragon/react-icons@0.1.0-alpha.1) (2021-11-22)
+
+**Note:** Version bump only for package @ff-dragon/react-icons
+
+
+
+
+
 # 0.1.0-alpha.0 (2021-11-18)
 
 
