@@ -7,7 +7,7 @@
         "publish": {
             "conventionalCommits": true,
             "ignoreChanges": ["*.md", "**/__test__/**"],
-            "registry": "https://registry.npmjs.org",
+            "@ff-dragon:registry": "https://registry.npmjs.org",
             "message": "chore(release): publish %s"
         }
     },

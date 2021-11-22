@@ -22,7 +22,7 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "@ff-dragon:registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@ff-dragon/react-theme": "^0.2.0-alpha.1",
