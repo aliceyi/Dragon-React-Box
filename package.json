@@ -22,7 +22,7 @@
     "dev": "start-storybook -p 6006",
     "release": "lerna version prerelease --yes",
     "publish": "lerna publish",
-    "lerna:publish": "lerna publish from-package --yes",
+    "lerna:publish": "lerna publish from-git --yes",
     "start": "node bin/start",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext js,ts,tsx src",
