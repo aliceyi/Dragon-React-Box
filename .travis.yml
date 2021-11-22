@@ -33,7 +33,6 @@ deploy:
     #     branch: feature-lerna
     provider: script
     script:
-        - 'npm config list'
         - 'yarn run lerna:publish'
     skip_cleanup: true
     on:
