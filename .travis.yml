@@ -22,25 +22,36 @@ before_install:
 before_script:
     - yarn run lerna run prepublishOnly
 before_deploy:
-    - echo `//registry.npmjs.org/:_authToken=${AUTH_TOKEN}` >> $HOME/.npmrc 2> /dev/null
+    - echo `//registry.npmjs.org/:_authToken=$NPM_TOKEN` >> $HOME/.npmrc 2> /dev/null
     - echo `@ff-dragon:registry=https://registry.npmjs.org/` >> $HOME/.npmrc 2> /dev/null
     - npm config list
-deploy:
-    # provider: npm
-    # email: "$NPM_EMAIL"
-    # api_key: "$NPM_TOKEN"
-    # skip_cleanup: true
-    # on:
-    #     branch: feature-lerna
-    provider: script
-    script:
-        - 'yarn run lerna:publish'
-    skip_cleanup: true
-    on:
-        branch: feature-lerna
-    # provider: pages
-    # skip_cleanup: true
-    # github_token: $github_token # Set in the settings page of your repository, as a secure variable
-    # local_dir: storybook-static
-    # on:
-    #     branch: feature-lerna
+jobs:
+    include:
+        - stage: push to github pages
+          deploy:
+              provider: pages
+              skip_cleanup: true
+              github_token: $github_token # Set in the settings page of your repository, as a secure variable
+              local_dir: storybook-static
+              on:
+                  branch: feature-lerna
+        - stage: lerna publish
+          deploy:
+              # provider: npm
+              # email: "$NPM_EMAIL"
+              # api_key: "$NPM_TOKEN"
+              # skip_cleanup: true
+              # on:
+              #     branch: feature-lerna
+              provider: script
+              script:
+                  - 'yarn run lerna:publish'
+              skip_cleanup: true
+              on:
+                  branch: feature-lerna
+              # provider: pages
+              # skip_cleanup: true
+              # github_token: $github_token # Set in the settings page of your repository, as a secure variable
+              # local_dir: storybook-static
+              # on:
+              #     branch: feature-lerna

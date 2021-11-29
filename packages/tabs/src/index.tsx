@@ -17,19 +17,19 @@ export interface ITabs {
 }
 export interface ITabsProps {
     /**
-     * className
+     *  setting className
      */
     className?: string
     /**
-     * data
+     * tab data
      */
     data: ITabs[]
     /**
-     * id
+     * tab id
      */
     id?: string
     /**
-     * defaultIndex
+     * default selected Index
      */
     defaultIndex?: number
     /**
@@ -45,7 +45,7 @@ export interface ITabsProps {
      */
     testData?: string
     /**
-     * onClick
+     * setting onClick callback
      */
     // eslint-disable-next-line no-unused-vars
     onClick?: (event: MouseEvent, activeIndex: number) => void
