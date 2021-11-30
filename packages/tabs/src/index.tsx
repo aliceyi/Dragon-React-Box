@@ -33,7 +33,7 @@ export interface ITabsProps {
      */
     defaultIndex?: number
     /**
-     * isSticky: true | false
+     * is sticky: true | false
      */
     isSticky?: boolean
     /**
