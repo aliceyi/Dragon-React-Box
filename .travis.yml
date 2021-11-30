@@ -26,17 +26,17 @@ before_deploy:
     # - echo `@ff-dragon:registry=https://registry.npmjs.org/` >> $HOME/.npmrc 2> /dev/null
     - npm config set @ff-dragon:registry https://registry.npmjs.org/
     - npm config set -- '//registry.npmjs.org/:_authToken' $NPM_TOKEN
-    - npm config list
+    - npm config ls -l
 jobs:
     include:
-        - stage: push to github pages
-          deploy:
-              provider: pages
-              skip_cleanup: true
-              github_token: $github_token # Set in the settings page of your repository, as a secure variable
-              local_dir: storybook-static
-              on:
-                  branch: feature-lerna
+        # - stage: push to github pages
+        #   deploy:
+        #       provider: pages
+        #       skip_cleanup: true
+        #       github_token: $github_token # Set in the settings page of your repository, as a secure variable
+        #       local_dir: storybook-static
+        #       on:
+        #           branch: feature-lerna
         - stage: lerna publish
           deploy:
               # provider: npm
