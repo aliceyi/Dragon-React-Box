@@ -22,8 +22,10 @@ before_install:
 before_script:
     - yarn run lerna run prepublishOnly
 before_deploy:
-    - echo `//registry.npmjs.org/:_authToken=${$NPM_TOKEN}` >> $HOME/.npmrc 2> /dev/null
-    - echo `@ff-dragon:registry=https://registry.npmjs.org/` >> $HOME/.npmrc 2> /dev/null
+    # - echo `//registry.npmjs.org/:_authToken=${$NPM_TOKEN}` >> $HOME/.npmrc 2> /dev/null
+    # - echo `@ff-dragon:registry=https://registry.npmjs.org/` >> $HOME/.npmrc 2> /dev/null
+    - npm config set @ff-dragon:registry https://registry.npmjs.org/
+    - npm config set -- '//registry.npmjs.org/:_authToken' $NPM_TOKEN
     - npm config list
 jobs:
     include:
