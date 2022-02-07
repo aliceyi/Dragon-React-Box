@@ -12,12 +12,32 @@ type Tab = {
     text: string
     path: string
     iconProps?: SvgIconProps
-    defaultIndex: number
 }
 
-type TabBarProps = {
+export type TabBarProps = {
+    /**
+     * setting tab bar data
+     * {
+     *  icon: React.FunctionComponent<SvgIconProps> | string
+     *  text: string
+     *  path: string
+     *  iconProps?: SvgIconProps
+     *  defaultIndex: number
+     * }
+     */
     tabs?: Array<Tab>
+    /**
+     * setting classNames
+     */
     classNames?: string
+    /**
+     * setting test id
+     */
+    testData?: string
+    /**
+     * setting default index of tabBar
+     */
+    defaultIndex: number
     /**
      * if you want routing to selected item path, this callback can implement.
      * const onClick = (item) => {
@@ -70,6 +90,7 @@ export const TabBar: FC<TabBarProps> = ({
     className,
     onClick,
     defaultIndex = 0,
+    testData,
 }: any) => {
     const [selectedIndex, setSelectedIndex] = useState(defaultIndex)
     const handleClick = (item, index) => {
@@ -77,7 +98,7 @@ export const TabBar: FC<TabBarProps> = ({
         onClick && onClick(item)
     }
     return (
-        <TabBarWrap className={className}>
+        <TabBarWrap data-testid={testData} className={className}>
             <TabBarContainer>{children}</TabBarContainer>
             <TabBarBarWrap>
                 {tabs.map((item: Tab, index) => {
@@ -86,11 +107,12 @@ export const TabBar: FC<TabBarProps> = ({
                         <TabBarBarTab
                             style={selectedIndex === index ? { color: `${colors.dark}` } : {}}
                             key={index}
+                            data-testid={`${testData}_${index}`}
                             onClick={() => {
-                                // onClick && onClick(item)
                                 handleClick(item, index)
                             }}
                         >
+                            {index}
                             <TabBarIcon>
                                 {typeof item.icon === 'string' && (
                                     <Icons {...item.iconProps}></Icons>
