@@ -9,6 +9,7 @@ const colors = {
     lightGrey: '#f5f5f5',
     gold: '#9c7d31',
     green: '#048273',
+    smoke: '#b6b6b6',
 }
 
 const fontWeight = {
@@ -59,16 +60,16 @@ const width = {
 }
 
 const fontSizes = {
-    xxs: '0.625rem',
-    xs: '0.75rem',
-    s: '0.875rem',
-    sp: '0.9375rem',
-    m: '1rem',
-    l: '1.25rem',
-    xl: '1.5rem',
-    xxl: '1.875rem',
-    xxxl: '2rem',
-    xxxxl: '2.875rem',
+    size_10: '0.625rem',
+    size_12: '0.75rem',
+    size_14: '0.875rem',
+    size_15: '0.9375rem',
+    size_16: '1rem',
+    size_20: '1.25rem',
+    size_24: '1.5rem',
+    size_30: '1.875rem',
+    size_32: '2rem',
+    size_46: '2.875rem',
 }
 
 const theme = {

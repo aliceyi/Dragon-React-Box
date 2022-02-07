@@ -10,6 +10,7 @@ declare const theme: {
         lightGrey: string;
         gold: string;
         green: string;
+        smoke: string;
     };
     fontWeight: {
         normal: string;
@@ -35,16 +36,16 @@ declare const theme: {
         comfortable: string;
     };
     fontSizes: {
-        xxs: string;
-        xs: string;
-        s: string;
-        sp: string;
-        m: string;
-        l: string;
-        xl: string;
-        xxl: string;
-        xxxl: string;
-        xxxxl: string;
+        size_10: string;
+        size_12: string;
+        size_14: string;
+        size_15: string;
+        size_16: string;
+        size_20: string;
+        size_24: string;
+        size_30: string;
+        size_32: string;
+        size_46: string;
     };
     height: {
         s: string;

@@ -129,7 +129,7 @@ const Pointer = styled.div`
 const TabItem = styled.div`
     display: inline-block;
     text-align: center;
-    font-size: ${fontSizes.m};
+    font-size: ${fontSizes.size_16};
     white-space: nowrap;
     margin-left: ${space.l};
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

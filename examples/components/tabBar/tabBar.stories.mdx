@@ -1,0 +1,78 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import { TabBar } from '../../../packages/tabBar/src/index'
+import IconItem from '../../../packages/icons/src/index'
+
+<Meta title="MDX/TabBar" component={TabBar} />
+
+<!--- This is your Story template function, shown here in React -->
+
+# TabBar
+
+Default TabBar in the system.
+
+# Install
+
+```
+    yarn add @ff-dragon/react-TabBar
+```
+
+# Import
+
+```
+    import Tabs from @ff-dragon/react-TabBar
+```
+
+# Option
+
+# Code Example
+
+### TabBar
+
+<!-- why show the MDXCreateElement tag, this is a storybooks issue, you can refer https://github.com/storybookjs/storybook/issues/11542 -->
+
+<Canvas>
+    <Story
+        name="TabBar"
+        args={{
+            classNames: 'abc',
+            tabs: [
+                {
+                    icon: 'IconEdit',
+                    iconProps: {
+                        width: '1.5rem',
+                        height: '1.5rem',
+                    },
+                    text: '发现',
+                    path: '/a',
+                },
+                {
+                    icon: 'IconPlus',
+                    iconProps: {
+                        width: '1.5rem',
+                        height: '1.5rem',
+                    },
+                    text: '探索',
+                    path: '/b',
+                },
+                {
+                    icon: 'IconGuide',
+                    iconProps: {
+                        width: '1.5rem',
+                        height: '1.5rem',
+                    },
+                    text: '远征',
+                    path: '/c',
+                },
+            ],
+            onClick(item) {
+                alert(`tabBar${item.text}`)
+            },
+        }}
+    >
+        {(args) => (
+            <TabBar {...args}>
+                <div>Test tabBar</div>
+            </TabBar>
+        )}
+    </Story>
+</Canvas>

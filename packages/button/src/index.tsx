@@ -144,9 +144,9 @@ const buttonBaseStyle = {
             large: space.xsp,
         },
         fontSize: {
-            small: fontSizes.xs,
-            medium: fontSizes.sp,
-            large: fontSizes.sp,
+            small: fontSizes.size_12,
+            medium: fontSizes.size_15,
+            large: fontSizes.size_15,
         },
     },
     textButton: {
@@ -171,9 +171,9 @@ const buttonBaseStyle = {
             large: space.xsp,
         },
         fontSize: {
-            small: fontSizes.xs,
-            medium: fontSizes.sp,
-            large: fontSizes.sp,
+            small: fontSizes.size_12,
+            medium: fontSizes.size_15,
+            large: fontSizes.size_15,
         },
     },
     iconButton: {
@@ -203,9 +203,9 @@ const buttonBaseStyle = {
             large: space.xxs,
         },
         fontSize: {
-            small: fontSizes.xxs,
-            medium: fontSizes.xxs,
-            large: fontSizes.xs,
+            small: fontSizes.size_10,
+            medium: fontSizes.size_10,
+            large: fontSizes.size_12,
         },
     },
 }

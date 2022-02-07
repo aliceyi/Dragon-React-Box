@@ -5,23 +5,23 @@ export interface ITabs {
 }
 export interface ITabsProps {
     /**
-     * className
+     *  setting className
      */
     className?: string;
     /**
-     * data
+     * tab data
      */
     data: ITabs[];
     /**
-     * id
+     * tab id
      */
     id?: string;
     /**
-     * defaultIndex
+     * default selected Index
      */
     defaultIndex?: number;
     /**
-     * isSticky: true | false
+     * is sticky: true | false
      */
     isSticky?: boolean;
     /**
@@ -33,7 +33,7 @@ export interface ITabsProps {
      */
     testData?: string;
     /**
-     * onClick
+     * setting onClick callback
      */
     onClick?: (event: MouseEvent, activeIndex: number) => void;
 }

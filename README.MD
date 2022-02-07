@@ -20,7 +20,7 @@ rollup 使用总结
 
 4. run document
 
-    `yarn storybook`
+    `yarn build-storybook`
 
 5. test
 
