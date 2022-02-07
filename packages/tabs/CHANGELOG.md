@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.0.0-alpha.5](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@ff-dragon/react-tabs@0.0.0-alpha.4...@ff-dragon/react-tabs@0.0.0-alpha.5) (2022-02-07)
+
+
+### Features
+
+* **tabBar:** Add tabBar components ([0d2bf43](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/0d2bf4386d9fcaf35fdb10bef9d960cfe8ae34a9))
+
+
+
+
+
 # [0.0.0-alpha.4](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/compare/@ff-dragon/react-tabs@0.0.0-alpha.3...@ff-dragon/react-tabs@0.0.0-alpha.4) (2021-11-30)
 
 **Note:** Version bump only for package @ff-dragon/react-tabs
