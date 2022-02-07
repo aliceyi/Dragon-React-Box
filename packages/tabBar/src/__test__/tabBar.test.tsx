@@ -65,7 +65,6 @@ describe('test Tabs component', () => {
     it('get active item index when click tab', () => {
         render(<TabBar {...testTabBars} />)
         const element = screen.getByTestId(`${testTabBars.testData}_2`)
-        console.log(element)
         expect(element).toBeInTheDocument()
         fireEvent.click(element)
         expect(element.getAttribute('data-testid')).toEqual(`${testTabBars.testData}_2`)
