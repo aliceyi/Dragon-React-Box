@@ -1,6 +1,6 @@
 {
   "name": "@ff-dragon/react-tabs",
-  "version": "0.0.0-alpha.6",
+  "version": "0.0.0-alpha.7",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
@@ -25,7 +25,7 @@
     "@ff-dragon:registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@ff-dragon/react-theme": "^0.2.0-alpha.3",
+    "@ff-dragon/react-theme": "^0.2.0-alpha.4",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

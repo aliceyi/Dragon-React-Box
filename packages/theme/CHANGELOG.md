@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0-alpha.4 (2022-02-07)
+
+
+### Features
+
+* **lerna:** Changed mono-Repo ([cc30328](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/cc303285c7574b8f92f6c107ae06d155ad14b490))
+* **tabBar:** Add tabBar components ([0d2bf43](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/0d2bf4386d9fcaf35fdb10bef9d960cfe8ae34a9))
+* **tabs:** Add tabs and icons compoents ([1be7ca5](https://gitlab.fftech.info/dragon/consumer-web/dragon-react-box/commit/1be7ca5ca28254669212559a04db2211d208880b))
+
+
+
+
+
 # 0.2.0-alpha.3 (2022-02-07)
 
 
