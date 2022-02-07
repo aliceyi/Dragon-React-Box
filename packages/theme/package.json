@@ -1,6 +1,6 @@
 {
   "name": "@ff-dragon/react-theme",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0-alpha.2",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",

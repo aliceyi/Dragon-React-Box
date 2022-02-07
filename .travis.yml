@@ -47,7 +47,6 @@ jobs:
               #     branch: feature-lerna
               provider: script
               script:
-                  - 'yarn release'
                   - 'yarn lerna:publish'
               skip_cleanup: true
               on:
