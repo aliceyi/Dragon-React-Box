@@ -1,6 +1,6 @@
 {
-  "name": "@ff-dragon/react-tabBar",
-  "version": "0.0.1-alpha.2",
+  "name": "@ff-dragon/react-tab-bar",
+  "version": "0.0.1-alpha.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "source": "./src/index.ts",
